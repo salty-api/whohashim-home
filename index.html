@@ -32,25 +32,23 @@ a.card:hover, a.card:focus-visible { transform: translateY(-4px); border-color: 
 .nba { --accent: var(--nba); } .nfl { --accent: var(--nfl); }
 .icon { width: 60px; height: 60px; border-radius: 14px; display: grid; place-items: center; font-size: 32px; background: color-mix(in srgb, var(--accent) 16%, transparent); margin-bottom: 22px; }
 .sport { font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); }
-h2 { font-size: 28px; margin: 6px 0 10px; }
-.desc { font-size: 15px; color: var(--mute); line-height: 1.5; min-height: 68px; }
+h2 { font-size: 28px; margin: 6px 0 0; }
 .go { margin-top: 24px; font-weight: 600; font-size: 15px; color: var(--accent); display: flex; align-items: center; gap: 8px; }
 .go span { transition: transform .18s; } a.card:hover .go span { transform: translateX(5px); }
 .host { font-size: 12px; color: #475569; margin-top: 4px; }
-@media (max-width: 720px) { .cards { grid-template-columns: 1fr; } main { padding: 40px 20px; } .desc { min-height: 0; } }
+@media (max-width: 720px) { .cards { grid-template-columns: 1fr; } main { padding: 40px 20px; } }
 </style>
 </head>
 <body>
 <main>
   <div class="brand">whohashim.com</div>
   <h1>Fantasy league history.</h1>
-  <p class="lede">Standings, champions, records and rivalries for two leagues. Pick one.</p>
+  <p class="lede">Pick a league.</p>
   <div class="cards">
     <a class="card nba" href="https://fantrax.whohashim.com/">
       <div class="icon" aria-hidden="true">🏀</div>
       <div class="sport">Basketball · NBA</div>
       <h2>Fantrax Platinum</h2>
-      <p class="desc">All-time standings, weekly recaps, rivalries, and a Who Has Him tracker for every player ever drafted.</p>
       <div class="go">Open the NBA league <span>→</span></div>
       <div class="host">fantrax.whohashim.com</div>
     </a>
@@ -58,7 +56,6 @@ h2 { font-size: 28px; margin: 6px 0 10px; }
       <div class="icon" aria-hidden="true">🏈</div>
       <div class="sport">Football</div>
       <h2>JMML</h2>
-      <p class="desc">All-time standings, owner profiles, records, rivalries, and live playoff odds.</p>
       <div class="go">Open JMML Football <span>→</span></div>
       <div class="host">jmml.whohashim.com</div>
     </a>
