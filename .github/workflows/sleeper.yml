@@ -1,0 +1,69 @@
+name: Sleeper report
+
+on:
+  schedule:
+    - cron: "10 * * * *"   # hourly; the gate step keeps only the slots below (Pacific time)
+  workflow_dispatch:        # run by hand; skips the gate
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: sleeper
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Gate on Pacific-time slots
+        id: gate
+        env:
+          SCHEDULE: ${{ github.event.schedule }}
+        run: |
+          d=$(TZ=America/Los_Angeles date +%w); h=$(TZ=America/Los_Angeles date +%-H)
+          run=0
+          [ -z "$SCHEDULE" ] && run=1
+          [ "$d" = 0 ] && [ "$h" -ge 7 ] && [ "$h" -le 21 ] && run=1   # Sun 7am-9pm
+          [ "$d" = 4 ] && [ "$h" = 23 ] && run=1                       # Thu 11pm
+          [ "$d" = 1 ] && [ "$h" -ge 21 ] && [ "$h" -le 23 ] && run=1  # Mon 9-11pm
+          [ "$d" = 2 ] && [ "$h" -le 3 ] && run=1                      # Tue 12-3am
+          [ "$d" = 2 ] && [ "$h" = 9 ] && run=1                        # Tue 9am (waivers/final scores)
+          echo "PT day=$d hour=$h run=$run"
+          echo "run=$run" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/checkout@v4
+        if: steps.gate.outputs.run == '1'
+
+      - name: Cache Sleeper player list (refetched daily)
+        if: steps.gate.outputs.run == '1'
+        id: date
+        run: echo "d=$(TZ=America/Los_Angeles date +%F)" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/cache@v4
+        if: steps.gate.outputs.run == '1'
+        with:
+          path: sleeper/data
+          key: sleeper-players-${{ steps.date.outputs.d }}
+
+      - name: Build and publish
+        if: steps.gate.outputs.run == '1'
+        run: |
+          python3 sleeper/build_report.py
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add sleeper/index.html
+          git diff --cached --quiet && { echo "No change"; exit 0; }
+          git commit -m "Sleeper report $(TZ=America/Los_Angeles date '+%Y-%m-%d %H:%M')"
+          git push
+
+      - name: Open an issue if the refresh failed
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          url="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+          open=$(gh issue list --state open --search "Sleeper refresh failing in:title" --json number -q '.[0].number')
+          if [ -n "$open" ]; then gh issue comment "$open" --body "Failed again: $url"
+          else gh issue create --title "Sleeper refresh failing" --body "A scheduled run failed: $url"; fi
