@@ -725,7 +725,7 @@ def waiver_tab():
     # recent FAAB claims by position (won and lost), last 4 weeks
     RECENT = 4
     for d in info:
-        d["bids"] = {p: [0, 0] for p in POS}
+        d["bids"] = {p: [0, 0, 0, 0] for p in POS}
     byid = {d["t"]["id"]: d for d in info}
     for t in all_txs:
         if t.get("type") != "waiver" or t["wk"] < cur - RECENT + 1:
@@ -734,8 +734,9 @@ def waiver_tab():
         bid = (t.get("settings") or {}).get("waiver_bid") or 0
         for p in (t.get("adds") or {}):
             if rid in byid and ppos(p) in POS and bid > 0:
-                byid[rid]["bids"][ppos(p)][0] += bid
-                byid[rid]["bids"][ppos(p)][1] += 1
+                k = 0 if t.get("status") == "complete" else 2
+                byid[rid]["bids"][ppos(p)][k] += bid
+                byid[rid]["bids"][ppos(p)][k + 1] += 1
     for sl in SL:
         asc = sorted(info, key=lambda d: sum(d["pr"][sl]))
         for i, d in enumerate(asc):
@@ -771,8 +772,13 @@ def waiver_tab():
             sub = ""
             ring = ""
             if b is not None:
-                sub = f'<br><small>{"$%d (%d)" % tuple(b) if b[1] else "no bids"}</small>'
-                if b[1] and v >= 5:
+                parts_ = []
+                if b[1]:
+                    parts_.append(f'won ${b[0]} ({b[1]})')
+                if b[3]:
+                    parts_.append(f'<span style="color:#f5c542">lost ${b[2]} ({b[3]})</span>')
+                sub = f'<br><small>{" | ".join(parts_) if parts_ else "no bids"}</small>'
+                if (b[1] or b[3]) and v >= 5:
                     ring = ";box-shadow:inset 0 0 0 2px #7fe0a0"
             tip = " + ".join(f"{x:.1f}" for x in d["pr"][sl])
             return f'<td class="n" style="{heat(v)}{ring}" title="starters proj: {tip}">{v:.1f}{sub}</td>'
@@ -787,7 +793,7 @@ def waiver_tab():
             f'<h2>Other teams: budget and positional need</h2>'
             f'<p class="sub">Need is 0-10 across the {n} other teams: 10 = weakest projected starters at that slot, 0 = strongest (hover for the starters\' projections). '
             f'FLEX is the two best leftover RB/WR/TE after the 2 RB, 2 WR, 1 TE, 1 QB slots. Injured-out players count as 0. '
-            f'Small text under each score = FAAB spent (and number of claims, won or lost) at that position over the last 4 weeks; a green outline means a need of 5+ backed by recent bids, which confirms the interest. Best target = the player on this roster who adds the most to that team\'s projected lineup (+ pts). Sorted by that gain. Team Debnar highlighted.</p>'
+            f'Small text under each score = FAAB claims at that position over the last 4 weeks, split into won and lost (amber; lost = outbid, roster full, or over budget, which still shows they wanted the position); a green outline means a need of 5+ backed by recent bids, which confirms the interest. Best target = the player on this roster who adds the most to that team\'s projected lineup (+ pts). Sorted by that gain. Team Debnar highlighted.</p>'
             f'<table><tr><th class="l">Team</th><th>FAAB left</th><th>QB</th><th>RB</th><th>WR</th><th>TE</th><th>FLEX</th><th class="l">Best target</th></tr>{trs}</table>')
 
 
