@@ -516,6 +516,7 @@ for w in range(1, cur + 1):
         txs += [dict(t, wk=w) for t in get(f"league/{LEAGUE}/transactions/{w}")]
     except Exception as ex:
         print("transactions unavailable", w, ex)
+all_txs = txs
 txs = [t for t in txs if t.get("status") == "complete"]
 txs.sort(key=lambda t: -(t.get("status_updated") or t.get("created") or 0))
 
@@ -721,6 +722,20 @@ def waiver_tab():
         info.append(dict(t=t, pr=pr, left=1000 - t["faab"], gains=gains))
     SL = ["QB", "RB", "WR", "TE", "FLEX"]
     n = len(info)
+    # recent FAAB claims by position (won and lost), last 4 weeks
+    RECENT = 4
+    for d in info:
+        d["bids"] = {p: [0, 0] for p in POS}
+    byid = {d["t"]["id"]: d for d in info}
+    for t in all_txs:
+        if t.get("type") != "waiver" or t["wk"] < cur - RECENT + 1:
+            continue
+        rid = (t.get("roster_ids") or [None])[0]
+        bid = (t.get("settings") or {}).get("waiver_bid") or 0
+        for p in (t.get("adds") or {}):
+            if rid in byid and ppos(p) in POS and bid > 0:
+                byid[rid]["bids"][ppos(p)][0] += bid
+                byid[rid]["bids"][ppos(p)][1] += 1
     for sl in SL:
         asc = sorted(info, key=lambda d: sum(d["pr"][sl]))
         for i, d in enumerate(asc):
@@ -750,8 +765,18 @@ def waiver_tab():
         t = d["t"]
         top_p = max(d["gains"], key=lambda p: d["gains"][p]) if d["gains"] else None
         g = d["gains"].get(top_p, 0) if top_p else 0
-        cells = "".join(
-            f'<td class="n" style="{heat(d["need"][sl])}" title="starters proj: {" + ".join(f"{v:.1f}" for v in d["pr"][sl])}">{d["need"][sl]:.1f}</td>' for sl in SL)
+        def cell(sl):
+            v = d["need"][sl]
+            b = d["bids"].get(sl)
+            sub = ""
+            ring = ""
+            if b is not None:
+                sub = f'<br><small>{"$%d (%d)" % tuple(b) if b[1] else "no bids"}</small>'
+                if b[1] and v >= 5:
+                    ring = ";box-shadow:inset 0 0 0 2px #7fe0a0"
+            tip = " + ".join(f"{x:.1f}" for x in d["pr"][sl])
+            return f'<td class="n" style="{heat(v)}{ring}" title="starters proj: {tip}">{v:.1f}{sub}</td>'
+        cells = "".join(cell(sl) for sl in SL)
         tgt = f'{e(pname(top_p))} <small>{ppos(top_p)} +{g:.1f}</small>' if top_p and g > 0.05 else '<span class="dim">-</span>'
         trs += (f'<tr{" class=me" if t is ME else ""}><td class="l"><b>{e(t["name"])}</b></td><td class="n">${d["left"]}</td>{cells}'
                 f'<td class="l">{tgt}</td></tr>')
@@ -762,7 +787,7 @@ def waiver_tab():
             f'<h2>Other teams: budget and positional need</h2>'
             f'<p class="sub">Need is 0-10 across the {n} other teams: 10 = weakest projected starters at that slot, 0 = strongest (hover for the starters\' projections). '
             f'FLEX is the two best leftover RB/WR/TE after the 2 RB, 2 WR, 1 TE, 1 QB slots. Injured-out players count as 0. '
-            f'Best target = the player on this roster who adds the most to that team\'s projected lineup (+ pts). Sorted by that gain. Team Debnar highlighted.</p>'
+            f'Small text under each score = FAAB spent (and number of claims, won or lost) at that position over the last 4 weeks; a green outline means a need of 5+ backed by recent bids, which confirms the interest. Best target = the player on this roster who adds the most to that team\'s projected lineup (+ pts). Sorted by that gain. Team Debnar highlighted.</p>'
             f'<table><tr><th class="l">Team</th><th>FAAB left</th><th>QB</th><th>RB</th><th>WR</th><th>TE</th><th>FLEX</th><th class="l">Best target</th></tr>{trs}</table>')
 
 
