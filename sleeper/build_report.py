@@ -690,6 +690,84 @@ week_html = (f'<h2>Week {cur} lineups</h2><p class="sub">Est = blended score for
              f'<div class="wgrid" style="margin-top:16px">{"".join(c for _, c in wk_cards)}</div>')
 
 
+
+# ---------- Waiver tab: lowest-Est team's roster + how every other team needs it ----------
+def waiver_tab():
+    ranked = sorted(wk_bar, key=lambda x: x[0])
+    if len(ranked) < 3:
+        return "<p class='sub'>Not enough teams.</p>"
+    lo_est, lo_live, lo = ranked[0]
+    nxt = ranked[1]
+    lo_r = next(x for x in rosters if x["roster_id"] == lo["id"])
+    lo_m = next(m for m in weeks[cur] if m["roster_id"] == lo["id"])
+    bad = ("Out", "IR", "Sus", "PUP")
+    ok = lambda p: (players.get(p) or {}).get("injury_status") not in bad
+
+    def parts(pids):
+        by = {p: sorted([proj.get(x, 0) for x in pids if ppos(x) == p and ok(x)], reverse=True) for p in POS}
+        pad = lambda l, n: (l + [0] * n)[:n]
+        flex = sorted(by["RB"][2:] + by["WR"][2:] + by["TE"][1:], reverse=True)
+        return dict(QB=pad(by["QB"], 1), RB=pad(by["RB"], 2), WR=pad(by["WR"], 2), TE=pad(by["TE"], 1), FLEX=pad(flex, 2))
+
+    total = lambda pr: sum(sum(v) for v in pr.values())
+    others = [(t, next(x for x in rosters if x["roster_id"] == t["id"])) for _, _, t in ranked[1:]]
+    cand = [p for p in (lo_r["players"] or []) if ppos(p) in POS and ok(p)]
+    info = []
+    for t, r in others:
+        pids = list(r["players"] or [])
+        pr = parts(pids)
+        base = total(pr)
+        gains = {p: total(parts(pids + [p])) - base for p in cand}
+        info.append(dict(t=t, pr=pr, left=1000 - t["faab"], gains=gains))
+    SL = ["QB", "RB", "WR", "TE", "FLEX"]
+    n = len(info)
+    for sl in SL:
+        asc = sorted(info, key=lambda d: sum(d["pr"][sl]))
+        for i, d in enumerate(asc):
+            d.setdefault("need", {})[sl] = 10 * (n - 1 - i) / max(n - 1, 1)
+
+    heat = lambda v: f"background:rgba(229,9,20,{0.08 + 0.55 * v / 10:.2f})"
+    # roster of the lowest team
+    starters = lo_m.get("starters") or []
+    spts = dict(zip(starters, lo_m.get("starters_points") or []))
+    ppl = lo_m.get("players_points") or {}
+    rrows = []
+    for pid in lo_r["players"] or []:
+        pl = players.get(pid) or {}
+        inj = pl.get("injury_status") or ""
+        bv = blend(pid, ppl.get(pid, 0))[0]
+        best = sorted(((d["gains"].get(pid, 0), d) for d in info), key=lambda x: -x[0])[:2]
+        fit = ", ".join(f'{e(d["t"]["name"])} <small>+{g:.1f} | ${d["left"]}</small>' for g, d in best if g > 0.05) or '<span class="dim">no one</span>'
+        rrows.append((pid in starters, proj.get(pid, 0),
+                      f'<tr><td class="l"><b>{e(pname(pid))}</b> <small>{ppos(pid)} {e(pl.get("team") or "FA")} {e(proj_opp.get(pid, ""))}</small>'
+                      f'{(" <span class=tag>" + e(inj) + "</span>") if inj else ""}</td><td>{"Starter" if pid in starters else "Bench"}</td>'
+                      f'<td class="n">{proj.get(pid, 0):.1f}</td><td class="n">{ppl.get(pid, 0) or 0:.1f}</td><td class="n"><b>{bv:.1f}</b></td><td class="l">{fit}</td></tr>'))
+    rrows.sort(key=lambda x: (not x[0], -x[1]))
+    # other teams
+    info.sort(key=lambda d: -max(d["gains"].values(), default=0))
+    trs = ""
+    for d in info:
+        t = d["t"]
+        top_p = max(d["gains"], key=lambda p: d["gains"][p]) if d["gains"] else None
+        g = d["gains"].get(top_p, 0) if top_p else 0
+        cells = "".join(
+            f'<td class="n" style="{heat(d["need"][sl])}" title="starters proj: {" + ".join(f"{v:.1f}" for v in d["pr"][sl])}">{d["need"][sl]:.1f}</td>' for sl in SL)
+        tgt = f'{e(pname(top_p))} <small>{ppos(top_p)} +{g:.1f}</small>' if top_p and g > 0.05 else '<span class="dim">-</span>'
+        trs += (f'<tr{" class=me" if t is ME else ""}><td class="l"><b>{e(t["name"])}</b></td><td class="n">${d["left"]}</td>{cells}'
+                f'<td class="l">{tgt}</td></tr>')
+    return (f'<h2>Waiver analysis: {e(lo["name"])}</h2>'
+            f'<p class="sub">Lowest blended Week {cur} estimate: <b>{lo_est:.1f}</b> ({lo_live:.1f} in), {nxt[0]-lo_est:.1f} below the next team ({e(nxt[2]["name"])} {nxt[0]:.1f}). '
+            f'If they are chopped, this roster hits waivers. FAAB bids are blind and clear Tuesday night.</p>'
+            f'<table><tr><th class="l">Player</th><th>Role</th><th>Proj</th><th>Live</th><th>Est</th><th class="l">Best fits (lineup gain | FAAB left)</th></tr>{"".join(r[2] for r in rrows)}</table>'
+            f'<h2>Other teams: budget and positional need</h2>'
+            f'<p class="sub">Need is 0-10 across the {n} other teams: 10 = weakest projected starters at that slot, 0 = strongest (hover for the starters\' projections). '
+            f'FLEX is the two best leftover RB/WR/TE after the 2 RB, 2 WR, 1 TE, 1 QB slots. Injured-out players count as 0. '
+            f'Best target = the player on this roster who adds the most to that team\'s projected lineup (+ pts). Sorted by that gain. Team Debnar highlighted.</p>'
+            f'<table><tr><th class="l">Team</th><th>FAAB left</th><th>QB</th><th>RB</th><th>WR</th><th>TE</th><th>FLEX</th><th class="l">Best target</th></tr>{trs}</table>')
+
+
+waiver_html = waiver_tab()
+
 # ---------- Chopped team tab: where the last chopped team's players went ----------
 def chop_flow():
     wk = done
@@ -806,8 +884,9 @@ td{{padding:6px 8px;border-bottom:1px solid #222;text-align:center}} .l{{text-al
 .wcard table{{font-size:12px}} .wcard td{{padding:4px 6px}} .bn{{font-size:11px;margin-top:8px;line-height:1.6}} .up{{color:#7fe0a0}} .stF b{{color:#fff}} .stL b{{color:#f5c542}} .stP b{{color:#8ab4ff}} .stBYE b{{color:#777}}
 body{{max-width:1400px}}
 </style></head><body>
-<div class="tabs"><button class="on" data-t="week">This Week</button><button data-t="league">League</button><button data-t="chop">Last Chopped</button></div>
+<div class="tabs"><button class="on" data-t="week">This Week</button><button data-t="league">League</button><button data-t="waiver">Waivers</button><button data-t="chop">Last Chopped</button></div>
 <div class="pane on" id="pane-week">{week_html}</div>
+<div class="pane" id="pane-waiver">{waiver_html}</div>
 <div class="pane" id="pane-chop">{chop_html}</div>
 <div class="pane" id="pane-league">
 <h1>{e(league['name'])}</h1>
