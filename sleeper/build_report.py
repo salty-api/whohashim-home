@@ -914,6 +914,8 @@ td{{padding:6px 8px;border-bottom:1px solid #222;text-align:center}} .l{{text-al
 .whead{{display:flex;justify-content:space-between;align-items:baseline}} .whead .big{{font-size:20px;font-weight:700}} .slot{{color:#888;font-size:11px;width:40px}}
 .wcard table{{font-size:12px}} .wcard td{{padding:4px 6px}} .bn{{font-size:11px;margin-top:8px;line-height:1.6}} .up{{color:#7fe0a0}} .stF b{{color:#fff}} .stL b{{color:#f5c542}} .stP b{{color:#8ab4ff}} .stBYE b{{color:#777}}
 body{{max-width:1400px}}
+td,th{{white-space:nowrap}} td.l{{max-width:190px;overflow:hidden;text-overflow:ellipsis}} td br{{display:none}} td.l small{{margin-left:4px}}
+.wcard td.l{{max-width:150px}} td.slot{{max-width:none}}
 </style></head><body>
 <div class="tabs"><button class="on" data-t="week">This Week</button><button data-t="league">League</button><button data-t="waiver">Waivers</button><button data-t="chop">Last Chopped</button></div>
 <div class="pane on" id="pane-week">{week_html}</div>
@@ -939,7 +941,7 @@ body{{max-width:1400px}}
 {tx_html}
 {live_html}
 </div>
-<script>document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{{document.querySelectorAll('.tabs button,.pane').forEach(x=>x.classList.remove('on'));b.classList.add('on');document.getElementById('pane-'+b.dataset.t).classList.add('on');}});</script>
+<script>document.querySelectorAll('td.l').forEach(c=>c.title=c.textContent.trim());document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{{document.querySelectorAll('.tabs button,.pane').forEach(x=>x.classList.remove('on'));b.classList.add('on');document.getElementById('pane-'+b.dataset.t).classList.add('on');}});</script>
 </body></html>"""
 OUT.write_text(page)
 print("wrote", OUT)
