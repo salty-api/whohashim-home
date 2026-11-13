@@ -689,6 +689,101 @@ week_html = (f'<h2>Week {cur} lineups</h2><p class="sub">Est = blended score for
              f'<p class="sub">Solid bar = points accumulated so far; faded extension = remaining projected points (end of bar = Est). Dashed line = lowest Est.</p>{wk_chart()}'
              f'<div class="wgrid" style="margin-top:16px">{"".join(c for _, c in wk_cards)}</div>')
 
+
+# ---------- Chopped team tab: where the last chopped team's players went ----------
+def chop_flow():
+    wk = done
+    cinfo = week_info[wk]["chopped"]
+    cm = next((x for x in weeks[wk] if x["roster_id"] == cinfo["id"]), None)
+    if not cm:
+        return "<p class='sub'>No chopped team yet.</p>"
+    cid = cinfo["id"]
+    cur_owner = {p: r["roster_id"] for r in rosters for p in (r["players"] or [])}
+    chron = sorted(txs, key=lambda t: t.get("status_updated") or t.get("created") or 0)
+    ts_of = lambda t: t.get("status_updated") or t.get("created") or 0
+    rows = []
+    for pid in cm["players"]:
+        mine = [ts_of(t) for t in chron if (t.get("adds") or {}).get(pid) == cid]
+        since = max(mine) if mine else 0
+        land = None
+        for t in chron:
+            r = (t.get("adds") or {}).get(pid)
+            if r is not None and r != cid and ts_of(t) > since and t["type"] in ("waiver", "free_agent", "trade"):
+                land = (r, (t.get("settings") or {}).get("waiver_bid") or 0, t["type"], ts_of(t))
+        if land is None and cur_owner.get(pid) not in (None, cid):
+            land = (cur_owner[pid], 0, "free_agent", 0)
+        rows.append(dict(pid=pid, pts=(cm.get("players_points") or {}).get(pid, 0), start=pid in cm["starters"], land=land))
+    # group by destination: biggest total FAAB first, unclaimed last
+    tot = {}
+    for r in rows:
+        k = r["land"][0] if r["land"] else None
+        r["dest"] = k
+        tot[k] = tot.get(k, 0) + (r["land"][1] if r["land"] else 0)
+    order = sorted(tot, key=lambda k: (k is None, -tot[k], -sum(1 for r in rows if r["dest"] == k)))
+    rows.sort(key=lambda r: (order.index(r["dest"]), -(r["land"][1] if r["land"] else 0), -r["pts"]))
+    maxbid = max([r["land"][1] for r in rows if r["land"]] + [1])
+    RH, X1, X2, TOP, W = 36, 330, 700, 20, 1020
+    H = TOP + RH * len(rows) + 10
+    o = [f'<svg viewBox="0 0 {W} {H}" width="100%" style="background:#1a1a1a;border-radius:8px">']
+    # destination nodes
+    dy = {}
+    for k in order:
+        idx = [i for i, r in enumerate(rows) if r["dest"] == k]
+        dy[k] = TOP + RH * (idx[0] + idx[-1] + 1) / 2
+    for i, r in enumerate(rows):
+        y = TOP + RH * i + RH / 2
+        k = r["dest"]
+        ty = dy[k]
+        bid = r["land"][1] if r["land"] else 0
+        me = k == ME["id"]
+        col = "#e50914" if me else ("#555" if k is None else "#8ab4ff")
+        wdt = 1.5 if (k is None or bid == 0) else 2 + 22 * bid / maxbid
+        dash = ' stroke-dasharray="4 4"' if k is None else ""
+        op = 0.45 if k is None else 0.6
+        o.append(f'<path d="M{X1},{y:.1f} C{(X1+X2)/2},{y:.1f} {(X1+X2)/2},{ty:.1f} {X2},{ty:.1f}" fill="none" stroke="{col}" stroke-opacity="{op}" stroke-width="{wdt:.1f}"{dash}/>')
+        if k is not None:
+            lab = f"${bid}" if r["land"][2] == "waiver" else "FA"
+            o.append(f'<text x="{X1+34}" y="{y+4:.1f}" fill="#fff" font-size="11" font-weight="700" text-anchor="middle" stroke="#1a1a1a" stroke-width="3" paint-order="stroke">{lab}</text>')
+        o.append(f'<text x="{X1-10}" y="{y+4:.1f}" fill="#e5e5e5" font-size="13" text-anchor="end">{e(pname(r["pid"]))} <tspan fill="#888" font-size="11">{ppos(r["pid"])} | {r["pts"]:.1f}{" S" if r["start"] else ""}</tspan></text>')
+        o.append(f'<circle cx="{X1}" cy="{y:.1f}" r="3.5" fill="#bbb"/>')
+    for k in order:
+        n = sum(1 for r in rows if r["dest"] == k)
+        name = "Still unclaimed" if k is None else teams[k]["name"]
+        col = "#e50914" if k == ME["id"] else ("#777" if k is None else "#8ab4ff")
+        sub = f"{n} player{'s' if n > 1 else ''}" + (f" | ${tot[k]}" if k is not None and tot[k] else "")
+        o.append(f'<rect x="{X2}" y="{dy[k]-14:.1f}" width="6" height="28" fill="{col}" rx="2"/>')
+        o.append(f'<text x="{X2+14}" y="{dy[k]-1:.1f}" fill="{col}" font-size="13" font-weight="700">{e(name)}</text>')
+        o.append(f'<text x="{X2+14}" y="{dy[k]+12:.1f}" fill="#888" font-size="11">{sub}</text>')
+    o.append("</svg>")
+    claimed = [r for r in rows if r["land"]]
+    spent = sum(r["land"][1] for r in claimed)
+    top = max(claimed, key=lambda r: r["land"][1]) if claimed else None
+    kp = [("Chopped", f'{e(cinfo["name"])}<small> W{wk}, {week_info[wk]["low"]:.1f} pts</small>'),
+          ("Players on roster", str(len(rows))),
+          ("Claimed since", f"{len(claimed)}<small> of {len(rows)}</small>"),
+          ("FAAB spent on them", f"${spent:,}")]
+    if top and top["land"][1]:
+        kp.append(("Biggest bid", f'${top["land"][1]}<small> {e(pname(top["pid"]))} to {e(teams[top["land"][0]]["name"])}</small>'))
+    kp_html = '<div class="kpis">' + "".join(f'<div class="kpi"><div class="v">{v}</div><div class="k">{k}</div></div>' for k, v in kp) + "</div>"
+    trs = ""
+    for r in rows:
+        if r["land"]:
+            k, bid, typ, ts = r["land"]
+            when = datetime.datetime.fromtimestamp(ts / 1000).strftime("%b %d %H:%M") if ts else "-"
+            dest = f'{e(teams[k]["name"])}'; bids = f"${bid}" if typ == "waiver" else "FA"
+        else:
+            dest, bids, when = "<span class=dim>Unclaimed</span>", "", "-"
+        trs += (f'<tr{" class=me" if r["dest"] == ME["id"] else ""}><td class="l"><b>{e(pname(r["pid"]))}</b> <small>{ppos(r["pid"])}</small></td>'
+                f'<td class="n">{r["pts"]:.1f}</td><td>{"Starter" if r["start"] else "Bench"}</td><td class="l">{dest}</td><td class="n">{bids}</td><td>{when}</td></tr>')
+    return (f'<h2>Where {e(cinfo["name"])} players went</h2>'
+            f'<p class="sub">Roster at the Week {wk} chop. Line thickness = FAAB bid ($) paid by the team that picked the player up; dashed gray = nobody has claimed them yet; '
+            f'"FA" = free-agent add with no bid. Labels show points scored in Week {wk} (S = started). Team Debnar in red.</p>'
+            + kp_html + "".join(o) +
+            '<table style="margin-top:16px"><tr><th class="l">Player</th><th>Wk pts</th><th>Role</th><th class="l">Landed with</th><th>Bid</th><th>When</th></tr>' + trs + "</table>")
+
+
+chop_html = chop_flow()
+
 page = f"""<!doctype html><html><head><meta charset="utf-8"><title>{e(league['name'])} - League Report</title>
 <style>
 body{{background:#141414;color:#e5e5e5;font-family:'Helvetica Neue',Arial,sans-serif;margin:0;padding:32px;max-width:1100px;margin:auto}}
@@ -711,8 +806,9 @@ td{{padding:6px 8px;border-bottom:1px solid #222;text-align:center}} .l{{text-al
 .wcard table{{font-size:12px}} .wcard td{{padding:4px 6px}} .bn{{font-size:11px;margin-top:8px;line-height:1.6}} .up{{color:#7fe0a0}} .stF b{{color:#fff}} .stL b{{color:#f5c542}} .stP b{{color:#8ab4ff}} .stBYE b{{color:#777}}
 body{{max-width:1400px}}
 </style></head><body>
-<div class="tabs"><button class="on" data-t="week">This Week</button><button data-t="league">League</button></div>
+<div class="tabs"><button class="on" data-t="week">This Week</button><button data-t="league">League</button><button data-t="chop">Last Chopped</button></div>
 <div class="pane on" id="pane-week">{week_html}</div>
+<div class="pane" id="pane-chop">{chop_html}</div>
 <div class="pane" id="pane-league">
 <h1>{e(league['name'])}</h1>
 <p class="sub">{league['season']} season | Sleeper chopped league | {len(teams)} teams | through Week {done}{f' (Week {live} in progress)' if live else ''} | lowest score each week is eliminated</p>
