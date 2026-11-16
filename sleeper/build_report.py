@@ -790,6 +790,46 @@ def waiver_tab():
                     f'Calibrated to league history: median winning bid is about 24% of budget left, stars 35-90%. Assumes each team wins at most one claim, highest bid first. '
                     f'"To beat" = the highest estimated bid on that player plus $1. These are rough estimates, not predictions of real bidding behavior.</p>'
                     f'<table><tr><th class="l">Player</th><th class="l">Top 3 est. bidders</th><th class="l">Simulated winner</th><th>To beat</th></tr>{"".join(srows)}</table>')
+    # ---- Team Debnar: suggested spend ----
+    # For each player that helps us, price = highest rival est. bid + $1 (capped at our FAAB left).
+    # "Win" = we can afford that price. Then pick claims greedily by gain, within budget, at most one claim per player.
+    me_d = next((d for d in info if d["t"] is ME), None)
+    if me_d and srows:
+        rivals = [d for d in info if d is not me_d]
+        opts = []
+        for p in cand:
+            g = me_d["gains"][p]
+            if g < 0.5:
+                continue
+            rbid = max((int(d["left"] * share(d["gains"][p])) for d in rivals), default=0)
+            price = rbid + 1
+            opts.append(dict(p=p, g=g, rbid=rbid, price=price, ok=price <= me_d["left"]))
+        opts.sort(key=lambda o: -o["g"])
+        budget, picks = me_d["left"], []
+        for o in opts:
+            if o["ok"] and o["price"] <= budget and len(picks) < 3:
+                picks.append(o); budget -= o["price"]
+        pick_ids = {o["p"]: i for i, o in enumerate(picks)}
+        mrows = ""
+        for o in opts:
+            if o["p"] in pick_ids:
+                verdict = f'<b style="color:#7fe0a0">Bid ${o["price"]}</b>'
+            elif not o["ok"]:
+                verdict = f'<span class="dim">Skip: needs ${o["price"]}, we have ${me_d["left"]}</span>'
+            else:
+                verdict = '<span class="dim">Skip: budget or claim limit</span>'
+            ppd = f'{o["g"] / o["price"]:.2f}' if o["price"] else "-"
+            mrows += (f'<tr class="me"><td class="l"><b>{e(pname(o["p"]))}</b> <small>{ppos(o["p"])}</small></td>'
+                      f'<td class="n">+{o["g"]:.1f}</td><td class="n">${o["rbid"]}</td><td class="n">${o["price"]}</td>'
+                      f'<td class="n">{ppd}</td><td class="l">{verdict}</td></tr>')
+        if opts:
+            total_spend = me_d["left"] - budget
+            summary = (f'Suggested: ' + ", ".join(f'{e(pname(o["p"]))} ${o["price"]}' for o in picks) + f' (total ${total_spend}, ${budget} left).'
+                       if picks else 'No affordable claim adds 0.5+ pts to our lineup; hold the budget.')
+            sim_html += (f'<h2>Team Debnar: suggested bids</h2><p class="sub">We have ${me_d["left"]} FAAB. Gain = change in our projected Week {cur} lineup. '
+                         f'Rival bid = highest estimated bid from the other teams (see simulation above). Bid = rival bid + $1, so we only win if the estimate is right; consider a few dollars of cushion on a must-have. '
+                         f'Picks go by biggest gain first, up to 3 claims within budget. Check roster space before dropping. <b>{summary}</b></p>'
+                         f'<table><tr><th class="l">Player</th><th>Our gain</th><th>Top rival est.</th><th>Bid to win</th><th>Gain per $</th><th class="l">Call</th></tr>{mrows}</table>')
     # other teams
     info.sort(key=lambda d: -max(d["gains"].values(), default=0))
     trs = ""
@@ -800,35 +840,38 @@ def waiver_tab():
         def cell(sl):
             v = d["need"][sl]
             b = d["bids"].get(sl)
-            sub = ""
-            ring = ""
-            if b is not None:
-                parts_ = []
+            sub = ring = ""
+            tip = "starters proj: " + " + ".join(f"{x:.1f}" for x in d["pr"][sl])
+            if b is not None and (b[1] or b[3]):
+                g_ = []
                 if b[1]:
-                    parts_.append(f'won ${b[0]} ({b[1]})')
+                    g_.append(f'<span style="color:#7fe0a0">&#10003;${b[0]}</span>')
                 if b[3]:
-                    parts_.append(f'<span style="color:#f5c542">lost ${b[2]} ({b[3]})</span>')
-                sub = f'<br><small>{" | ".join(parts_) if parts_ else "no bids"}</small>'
-                if (b[1] or b[3]) and v >= 5:
+                    g_.append(f'<span style="color:#f5c542">&#10007;${b[2]}</span>')
+                sub = f'<div class="bh">{" ".join(g_)}</div>'
+                tip += f" | last 4 wks: won ${b[0]} ({b[1]}), lost ${b[2]} ({b[3]})"
+                if v >= 5:
                     ring = ";box-shadow:inset 0 0 0 2px #7fe0a0"
-            tip = " + ".join(f"{x:.1f}" for x in d["pr"][sl])
-            return f'<td class="n" style="{heat(v)}{ring}" title="starters proj: {tip}">{v:.1f}{sub}</td>'
+            return f'<td class="n nc" style="{heat(v)}{ring}" title="{tip}">{v:.1f}{sub}</td>'
         cells = "".join(cell(sl) for sl in SL)
         top3 = sorted(((gv, pp) for pp, gv in d["gains"].items() if gv > 0.05), reverse=True)[:3]
-        tgt = "<br>".join(f'{"<b>" if i == 0 else ""}{e(pname(pp))}{"</b>" if i == 0 else ""} <small>{ppos(pp)} +{gv:.1f}</small>' for i, (gv, pp) in enumerate(top3)) or '<span class="dim">-</span>'
+        tgt = "".join(f'<div class="tg{" top" if i == 0 else ""}">{e(pname(pp))} <small>{ppos(pp)} +{gv:.1f}</small></div>' for i, (gv, pp) in enumerate(top3)) or '<span class="dim">-</span>'
         needs = sorted(SL, key=lambda sl: (-d["need"][sl], sum(d["pr"][sl])))[:3]
-        nd = "<br>".join(f'{"<b>" if i == 0 else ""}{i + 1}. {sl} <small>{d["need"][sl]:.1f}</small>{"</b>" if i == 0 else ""}' for i, sl in enumerate(needs))
+        nd = " &middot; ".join(f'{"<b>" if i == 0 else ""}{sl} <small>{d["need"][sl]:.1f}</small>{"</b>" if i == 0 else ""}' for i, sl in enumerate(needs))
         trs += (f'<tr{" class=me" if t is ME else ""}><td class="l"><b>{e(t["name"])}</b></td><td class="n">${d["left"]}</td>{cells}'
-                f'<td class="l">{nd}</td><td class="l">{tgt}</td></tr>')
+                f'<td class="l nd">{nd}</td><td class="l">{tgt}</td></tr>')
     return (f'<h2>Waiver analysis: {e(lo["name"])}</h2>'
             f'<p class="sub">Lowest blended Week {cur} estimate: <b>{lo_est:.1f}</b> ({lo_live:.1f} in), {nxt[0]-lo_est:.1f} below the next team ({e(nxt[2]["name"])} {nxt[0]:.1f}). '
             f'If they are chopped, this roster hits waivers. FAAB bids are blind and clear Tuesday night.</p>'
             f'<table><tr><th class="l">Player</th><th>Role</th><th>Proj</th><th>Live</th><th>Est</th><th class="l">Best fits (lineup gain | FAAB left)</th></tr>{"".join(r[2] for r in rrows)}</table>'
             f'<h2>Other teams: budget and positional need</h2>'
-            f'<p class="sub">Need is 0-10 across the {n} other teams: 10 = weakest projected starters at that slot, 0 = strongest (hover for the starters\' projections). '
-            f'FLEX is the two best leftover RB/WR/TE after the 2 RB, 2 WR, 1 TE, 1 QB slots. Injured-out players count as 0. '
-            f'Small text under each score = FAAB claims at that position over the last 4 weeks, split into won and lost (amber; lost = outbid, roster full, or over budget, which still shows they wanted the position); a green outline means a need of 5+ backed by recent bids, which confirms the interest. Top 3 needs = the slots with the highest need score. Top 3 targets = the players on this roster who add the most to that team\'s projected lineup (+ pts), best in bold. Sorted by best gain. Team Debnar highlighted.</p>'
-            f'<table><tr><th class="l">Team</th><th>FAAB left</th><th>QB</th><th>RB</th><th>WR</th><th>TE</th><th>FLEX</th><th class="l">Top 3 needs</th><th class="l">Top 3 targets (lineup gain)</th></tr>{trs}</table>{sim_html}')
+            f'<style>.nc{{line-height:1.15;padding:4px 6px;min-width:46px}} .bh{{font-size:10px;font-weight:400;white-space:nowrap;margin-top:1px}} '
+            f'.tg{{white-space:nowrap;line-height:1.35}} .tg.top{{font-weight:700}} .nd{{white-space:nowrap}} .lg{{display:flex;gap:18px;flex-wrap:wrap;font-size:12px;color:#999;margin:0 0 10px}} .lg b{{color:#ccc}}</style>'
+            f'<div class="lg"><span><b>Need</b> 0-10 across the {n} other teams; 10 = weakest projected starters at the slot (hover for projections)</span>'
+            f'<span><b>&#10003;$ / &#10007;$</b> FAAB won / lost at that position, last 4 wks (lost = outbid, roster full or over budget)</span>'
+            f'<span><b>Green outline</b> need 5+ backed by recent bids</span>'
+            f'<span><b>Targets</b> players here who add the most to the team\'s projected lineup (best in bold); FLEX = best 2 leftover RB/WR/TE; injured-out = 0</span></div>'
+            f'<div class="wrap"><table><tr><th class="l">Team</th><th>FAAB</th><th>QB</th><th>RB</th><th>WR</th><th>TE</th><th>FLEX</th><th class="l">Top 3 needs</th><th class="l">Top 3 targets (lineup gain)</th></tr>{trs}</table></div>{sim_html}')
 
 
 waiver_html = waiver_tab()
