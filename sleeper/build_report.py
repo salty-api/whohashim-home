@@ -759,6 +759,37 @@ def waiver_tab():
                       f'{(" <span class=tag>" + e(inj) + "</span>") if inj else ""}</td><td>{"Starter" if pid in starters else "Bench"}</td>'
                       f'<td class="n">{proj.get(pid, 0):.1f}</td><td class="n">{ppl.get(pid, 0) or 0:.1f}</td><td class="n"><b>{bv:.1f}</b></td><td class="l">{fit}</td></tr>'))
     rrows.sort(key=lambda x: (not x[0], -x[1]))
+    # ---- bid simulation ----
+    # est. bid = FAAB left * share; share rises with lineup gain (history: median winning bid ~24% of budget left, stars 35-90%)
+    gref = max((g for d in info for g in d["gains"].values()), default=0) or 1
+    share = lambda g: 0 if g < 0.5 else min(0.9, 0.15 + 0.75 * g / gref)
+    pairs = sorted(((int(d["left"] * share(g)), id(d), d, p) for d in info for p, g in d["gains"].items() if share(g) > 0), key=lambda x: -x[0])
+    won, taken, spent_t = {}, set(), set()
+    for b, _, d, p in pairs:
+        if p in taken or id(d) in spent_t or b <= 0:
+            continue
+        taken.add(p); spent_t.add(id(d)); won[p] = (d, b)
+    srows = []
+    for p in sorted(cand, key=lambda x: -max((d["gains"][x] for d in info), default=0)):
+        bids = sorted(((int(d["left"] * share(d["gains"][p])), d) for d in info if share(d["gains"][p]) > 0), key=lambda x: -x[0])[:3]
+        if not bids:
+            continue
+        if p in won:
+            w, wb = won[p]
+            res = f'<b>{e(w["t"]["name"])}</b> <small>at ~${wb}</small>'
+        else:
+            res = '<span class="dim">top bidders win other players</span>'
+        # price to beat the best bid on this player
+        beat = bids[0][0] + 1
+        srows.append(f'<tr><td class="l"><b>{e(pname(p))}</b> <small>{ppos(p)}</small></td>'
+                     f'<td class="l">{", ".join(e(d["t"]["name"]) + " <small>$" + str(b) + "</small>" for b, d in bids)}</td>'
+                     f'<td class="l">{res}</td><td class="n">${beat}</td></tr>')
+    sim_html = ""
+    if srows:
+        sim_html = (f'<h2>Bid simulation</h2><p class="sub">Estimated blind bid = FAAB left x a share (15% to 90%) that grows with the lineup gain from the player (a gain of 0.5 pts or less = no bid). '
+                    f'Calibrated to league history: median winning bid is about 24% of budget left, stars 35-90%. Assumes each team wins at most one claim, highest bid first. '
+                    f'"To beat" = the highest estimated bid on that player plus $1. These are rough estimates, not predictions of real bidding behavior.</p>'
+                    f'<table><tr><th class="l">Player</th><th class="l">Top 3 est. bidders</th><th class="l">Simulated winner</th><th>To beat</th></tr>{"".join(srows)}</table>')
     # other teams
     info.sort(key=lambda d: -max(d["gains"].values(), default=0))
     trs = ""
@@ -783,9 +814,12 @@ def waiver_tab():
             tip = " + ".join(f"{x:.1f}" for x in d["pr"][sl])
             return f'<td class="n" style="{heat(v)}{ring}" title="starters proj: {tip}">{v:.1f}{sub}</td>'
         cells = "".join(cell(sl) for sl in SL)
-        tgt = f'{e(pname(top_p))} <small>{ppos(top_p)} +{g:.1f}</small>' if top_p and g > 0.05 else '<span class="dim">-</span>'
+        top3 = sorted(((gv, pp) for pp, gv in d["gains"].items() if gv > 0.05), reverse=True)[:3]
+        tgt = "<br>".join(f'{"<b>" if i == 0 else ""}{e(pname(pp))}{"</b>" if i == 0 else ""} <small>{ppos(pp)} +{gv:.1f}</small>' for i, (gv, pp) in enumerate(top3)) or '<span class="dim">-</span>'
+        needs = sorted(SL, key=lambda sl: (-d["need"][sl], sum(d["pr"][sl])))[:3]
+        nd = "<br>".join(f'{"<b>" if i == 0 else ""}{i + 1}. {sl} <small>{d["need"][sl]:.1f}</small>{"</b>" if i == 0 else ""}' for i, sl in enumerate(needs))
         trs += (f'<tr{" class=me" if t is ME else ""}><td class="l"><b>{e(t["name"])}</b></td><td class="n">${d["left"]}</td>{cells}'
-                f'<td class="l">{tgt}</td></tr>')
+                f'<td class="l">{nd}</td><td class="l">{tgt}</td></tr>')
     return (f'<h2>Waiver analysis: {e(lo["name"])}</h2>'
             f'<p class="sub">Lowest blended Week {cur} estimate: <b>{lo_est:.1f}</b> ({lo_live:.1f} in), {nxt[0]-lo_est:.1f} below the next team ({e(nxt[2]["name"])} {nxt[0]:.1f}). '
             f'If they are chopped, this roster hits waivers. FAAB bids are blind and clear Tuesday night.</p>'
@@ -793,8 +827,8 @@ def waiver_tab():
             f'<h2>Other teams: budget and positional need</h2>'
             f'<p class="sub">Need is 0-10 across the {n} other teams: 10 = weakest projected starters at that slot, 0 = strongest (hover for the starters\' projections). '
             f'FLEX is the two best leftover RB/WR/TE after the 2 RB, 2 WR, 1 TE, 1 QB slots. Injured-out players count as 0. '
-            f'Small text under each score = FAAB claims at that position over the last 4 weeks, split into won and lost (amber; lost = outbid, roster full, or over budget, which still shows they wanted the position); a green outline means a need of 5+ backed by recent bids, which confirms the interest. Best target = the player on this roster who adds the most to that team\'s projected lineup (+ pts). Sorted by that gain. Team Debnar highlighted.</p>'
-            f'<table><tr><th class="l">Team</th><th>FAAB left</th><th>QB</th><th>RB</th><th>WR</th><th>TE</th><th>FLEX</th><th class="l">Best target</th></tr>{trs}</table>')
+            f'Small text under each score = FAAB claims at that position over the last 4 weeks, split into won and lost (amber; lost = outbid, roster full, or over budget, which still shows they wanted the position); a green outline means a need of 5+ backed by recent bids, which confirms the interest. Top 3 needs = the slots with the highest need score. Top 3 targets = the players on this roster who add the most to that team\'s projected lineup (+ pts), best in bold. Sorted by best gain. Team Debnar highlighted.</p>'
+            f'<table><tr><th class="l">Team</th><th>FAAB left</th><th>QB</th><th>RB</th><th>WR</th><th>TE</th><th>FLEX</th><th class="l">Top 3 needs</th><th class="l">Top 3 targets (lineup gain)</th></tr>{trs}</table>{sim_html}')
 
 
 waiver_html = waiver_tab()
