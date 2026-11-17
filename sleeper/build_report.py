@@ -320,8 +320,9 @@ for pid, pj in proj.items():
 fa = [f for f in fa if f["team"] != "FA" and f["inj"] not in ("Out", "IR", "Sus", "PUP")]
 
 # projected optimal lineup per team
-def proj_lineup(pids):
-    by = {p: sorted([proj.get(x, 0) for x in pids if ppos(x) == p], reverse=True) for p in POS}
+def proj_lineup(pids, pj=None):
+    pj = proj if pj is None else pj
+    by = {p: sorted([pj.get(x, 0) for x in pids if ppos(x) == p], reverse=True) for p in POS}
     core = by["QB"][:1] + by["RB"][:2] + by["WR"][:2] + by["TE"][:1]
     flex = sorted(by["RB"][2:] + by["WR"][2:] + by["TE"][1:], reverse=True)[:2]
     return sum(core) + sum(flex)
@@ -339,6 +340,29 @@ proj_tbl = "".join(
     f'<tr{" class=me" if t is ME else ""}><td>{i+1}</td><td class="l">{e(t["name"])}</td><td class="n">{pj:.1f}</td><td class="n">{lp:.1f}</td>'
     f'<td class="n">{pj-proj_rows_data[-1][0]:+.1f}</td></tr>' for i, (pj, t, lp) in enumerate(proj_rows_data))
 my_proj_rank = next(i for i, (pj, t, lp) in enumerate(proj_rows_data) if t is ME) + 1
+
+# next-week (Week cur+1) projections for the League tab
+nxt_wk = cur + 1
+proj_nx = {}
+try:
+    for d in getu(f"https://api.sleeper.com/projections/nfl/{league['season']}/{nxt_wk}?season_type=regular&{POSQ}"):
+        if d.get("player_id") in players and d["stats"]:
+            proj_nx[d["player_id"]] = lg_pts(d["stats"]) if d["stats"].get("gp", 1) else 0
+except Exception as ex:
+    print("next-week projections unavailable:", ex)
+nx_rows = sorted(
+    [(proj_lineup(next(x for x in rosters if x["roster_id"] == t["id"])["players"], proj_nx), pj, t)
+     for pj, t, lp in proj_rows_data], key=lambda x: -x[0])
+nx_html = ""
+if any(v for v in proj_nx.values()) and nx_rows:
+    nx_tbl = "".join(
+        f'<tr{" class=me" if t is ME else ""}><td>{i+1}</td><td class="l">{e(t["name"])}</td><td class="n">{n:.1f}</td>'
+        f'<td class="n">{pj:.1f}</td><td class="n">{n-pj:+.1f}</td><td class="n">{n-nx_rows[-1][0]:+.1f}</td></tr>'
+        for i, (n, pj, t) in enumerate(nx_rows))
+    nx_html = (f'<h2>Week {nxt_wk} projections</h2><p class="sub">Best projected lineup (QB, 2 RB, 2 WR, TE, 2 FLEX) from each team\'s current roster, '
+               f'Sleeper/RotoWire rescored with league rules. Shown for teams still alive; rosters will change after the Week {cur} chop and waivers. '
+               f'Bye weeks and injuries are already reflected in the projections.</p>'
+               f'<table><tr><th>#</th><th class="l">Team</th><th>Wk {nxt_wk} proj</th><th>Wk {cur} proj</th><th>Change</th><th>vs low</th></tr>{nx_tbl}</table>')
 
 
 def proj_bars():
@@ -1006,6 +1030,7 @@ td,th{{white-space:nowrap}} td.l{{max-width:190px;overflow:hidden;text-overflow:
 <h2>Highlights</h2><ul>{bul_html}</ul>
 <h2>Weekly scores</h2><p class="sub">Red outline marks the chop week. Colors scale across all weekly scores. * = in progress.</p>
 <div class="wrap"><table><tr><th class="l">Team</th><th>Status</th>{hm_head}<th>Total</th><th>Avg</th></tr>{''.join(hm_rows)}</table></div>
+{nx_html}
 <h2>Score trend</h2>{line_chart()}
 <h2>Weekly chop results</h2>
 <table><tr><th>Wk</th><th class="l">Chopped</th><th>Score</th><th>Next lowest</th><th>Gap</th><th class="l">High scorer</th><th>High</th><th>Avg</th><th>Alive</th></tr>{chop_rows}</table>
