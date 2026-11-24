@@ -723,8 +723,15 @@ def waiver_tab():
         return "<p class='sub'>Not enough teams.</p>"
     lo_est, lo_live, lo = ranked[0]
     nxt = ranked[1]
-    lo_r = next(x for x in rosters if x["roster_id"] == lo["id"])
-    lo_m = next(m for m in weeks[cur] if m["roster_id"] == lo["id"])
+    # target = most recently chopped team (its roster is empty now; use its last-week roster)
+    ch = max((t for t in teams.values() if t["elim"]), key=lambda t: t["elim"], default=None)
+    if ch is None:
+        return "<p class='sub'>No team has been chopped yet.</p>"
+    lo_m = next(m for m in weeks[ch["elim"]] if m["roster_id"] == ch["id"])
+    # the "chopped" transaction lists the full roster dropped (the matchup snapshot can miss players)
+    dropped = [p for t in all_txs if t.get("type") == "chopped" and ch["id"] in (t.get("roster_ids") or []) for p in (t.get("drops") or {})]
+    lo_r = dict(players=dropped or list(lo_m.get("players") or []))
+    rostered = {p for x in rosters for p in (x["players"] or [])}
     bad = ("Out", "IR", "Sus", "PUP")
     ok = lambda p: (players.get(p) or {}).get("injury_status") not in bad
 
@@ -735,8 +742,8 @@ def waiver_tab():
         return dict(QB=pad(by["QB"], 1), RB=pad(by["RB"], 2), WR=pad(by["WR"], 2), TE=pad(by["TE"], 1), FLEX=pad(flex, 2))
 
     total = lambda pr: sum(sum(v) for v in pr.values())
-    others = [(t, next(x for x in rosters if x["roster_id"] == t["id"])) for _, _, t in ranked[1:]]
-    cand = [p for p in (lo_r["players"] or []) if ppos(p) in POS and ok(p)]
+    others = [(t, next(x for x in rosters if x["roster_id"] == t["id"])) for _, _, t in ranked]
+    cand = [p for p in (lo_r["players"] or []) if ppos(p) in POS and ok(p) and p not in rostered]
     info = []
     for t, r in others:
         pids = list(r["players"] or [])
@@ -884,9 +891,8 @@ def waiver_tab():
         nd = " &middot; ".join(f'{"<b>" if i == 0 else ""}{sl} <small>{d["need"][sl]:.1f}</small>{"</b>" if i == 0 else ""}' for i, sl in enumerate(needs))
         trs += (f'<tr{" class=me" if t is ME else ""}><td class="l"><b>{e(t["name"])}</b></td><td class="n">${d["left"]}</td>{cells}'
                 f'<td class="l nd">{nd}</td><td class="l">{tgt}</td></tr>')
-    return (f'<h2>Waiver analysis: {e(lo["name"])}</h2>'
-            f'<p class="sub">Lowest blended Week {cur} estimate: <b>{lo_est:.1f}</b> ({lo_live:.1f} in), {nxt[0]-lo_est:.1f} below the next team ({e(nxt[2]["name"])} {nxt[0]:.1f}). '
-            f'If they are chopped, this roster hits waivers. FAAB bids are blind and clear Tuesday night.</p>'
+    return (f'<h2>Waiver analysis: {e(ch["name"])} (chopped W{ch["elim"]})</h2>'
+            f'<p class="sub">Most recent chop. Their Week {ch["elim"]} roster hit waivers; players already claimed by another team are excluded. FAAB bids are blind and clear Tuesday night.</p>'
             f'<table><tr><th class="l">Player</th><th>Role</th><th>Proj</th><th>Live</th><th>Est</th><th class="l">Best fits (lineup gain | FAAB left)</th></tr>{"".join(r[2] for r in rrows)}</table>'
             f'<h2>Other teams: budget and positional need</h2>'
             f'<style>.nc{{line-height:1.15;padding:4px 6px;min-width:46px}} .bh{{font-size:10px;font-weight:400;white-space:nowrap;margin-top:1px}} '
