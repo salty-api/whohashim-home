@@ -1,0 +1,3714 @@
+[
+ {
+  "owner": "Tony P",
+  "opponent": "Philippe S",
+  "wins": 1,
+  "losses": 0,
+  "pf": 110.0,
+  "pa": 75.0
+ },
+ {
+  "owner": "Tony P",
+  "opponent": "Ami S",
+  "wins": 0,
+  "losses": 1,
+  "pf": 66.0,
+  "pa": 83.0
+ },
+ {
+  "owner": "Tony P",
+  "opponent": "Cory K",
+  "wins": 0,
+  "losses": 1,
+  "pf": 63.0,
+  "pa": 70.0
+ },
+ {
+  "owner": "Tony P",
+  "opponent": "Daniel B",
+  "wins": 1,
+  "losses": 0,
+  "pf": 83.0,
+  "pa": 65.0
+ },
+ {
+  "owner": "Tony P",
+  "opponent": "Chris F",
+  "wins": 0,
+  "losses": 1,
+  "pf": 76.0,
+  "pa": 103.0
+ },
+ {
+  "owner": "Tony P",
+  "opponent": "Mike S",
+  "wins": 0,
+  "losses": 2,
+  "pf": 187.0,
+  "pa": 210.0
+ },
+ {
+  "owner": "Tony P",
+  "opponent": "Torre P",
+  "wins": 0,
+  "losses": 2,
+  "pf": 146.0,
+  "pa": 202.0
+ },
+ {
+  "owner": "Tony P",
+  "opponent": "Chip W",
+  "wins": 1,
+  "losses": 1,
+  "pf": 185.0,
+  "pa": 189.0
+ },
+ {
+  "owner": "Tony P",
+  "opponent": "Rushabh S",
+  "wins": 1,
+  "losses": 0,
+  "pf": 80.0,
+  "pa": 57.0
+ },
+ {
+  "owner": "Tony P",
+  "opponent": "Kris C",
+  "wins": 1,
+  "losses": 0,
+  "pf": 117.0,
+  "pa": 92.0
+ },
+ {
+  "owner": "Tony P",
+  "opponent": "Joby S",
+  "wins": 0,
+  "losses": 1,
+  "pf": 77.0,
+  "pa": 82.0
+ },
+ {
+  "owner": "Philippe S",
+  "opponent": "Tony P",
+  "wins": 0,
+  "losses": 1,
+  "pf": 75.0,
+  "pa": 110.0
+ },
+ {
+  "owner": "Philippe S",
+  "opponent": "Daniel B",
+  "wins": 4,
+  "losses": 2,
+  "pf": 523.0,
+  "pa": 478.0
+ },
+ {
+  "owner": "Philippe S",
+  "opponent": "Ami S",
+  "wins": 1,
+  "losses": 2,
+  "pf": 265.0,
+  "pa": 306.0
+ },
+ {
+  "owner": "Philippe S",
+  "opponent": "Chris F",
+  "wins": 8,
+  "losses": 9,
+  "pf": 1639.96,
+  "pa": 1665.4200000000003
+ },
+ {
+  "owner": "Philippe S",
+  "opponent": "Cory K",
+  "wins": 0,
+  "losses": 1,
+  "pf": 72.0,
+  "pa": 82.0
+ },
+ {
+  "owner": "Philippe S",
+  "opponent": "Torre P",
+  "wins": 7,
+  "losses": 13,
+  "pf": 1724.78,
+  "pa": 1855.38
+ },
+ {
+  "owner": "Philippe S",
+  "opponent": "Chip W",
+  "wins": 0,
+  "losses": 2,
+  "pf": 162.0,
+  "pa": 210.0
+ },
+ {
+  "owner": "Philippe S",
+  "opponent": "Rushabh S",
+  "wins": 8,
+  "losses": 10,
+  "pf": 1575.78,
+  "pa": 1721.26
+ },
+ {
+  "owner": "Philippe S",
+  "opponent": "Kris C",
+  "wins": 10,
+  "losses": 9,
+  "pf": 1738.98,
+  "pa": 1735.86
+ },
+ {
+  "owner": "Philippe S",
+  "opponent": "Joby S",
+  "wins": 0,
+  "losses": 1,
+  "pf": 59.0,
+  "pa": 110.0
+ },
+ {
+  "owner": "Philippe S",
+  "opponent": "Mike S",
+  "wins": 3,
+  "losses": 0,
+  "pf": 320.0,
+  "pa": 191.0
+ },
+ {
+  "owner": "Philippe S",
+  "opponent": "Tk B",
+  "wins": 2,
+  "losses": 1,
+  "pf": 287.0,
+  "pa": 265.0
+ },
+ {
+  "owner": "Philippe S",
+  "opponent": "Greg P",
+  "wins": 1,
+  "losses": 1,
+  "pf": 190.0,
+  "pa": 191.0
+ },
+ {
+  "owner": "Philippe S",
+  "opponent": "Paul R",
+  "wins": 10,
+  "losses": 6,
+  "pf": 1553.98,
+  "pa": 1268.3799999999999
+ },
+ {
+  "owner": "Philippe S",
+  "opponent": "Scott M",
+  "wins": 11,
+  "losses": 9,
+  "pf": 1817.98,
+  "pa": 1822.3600000000004
+ },
+ {
+  "owner": "Philippe S",
+  "opponent": "Dave K",
+  "wins": 5,
+  "losses": 1,
+  "pf": 581.04,
+  "pa": 448.28
+ },
+ {
+  "owner": "Philippe S",
+  "opponent": "Jeff J",
+  "wins": 9,
+  "losses": 6,
+  "pf": 1360.5799999999997,
+  "pa": 1303.32
+ },
+ {
+  "owner": "Philippe S",
+  "opponent": "Matt D",
+  "wins": 0,
+  "losses": 3,
+  "pf": 184.0,
+  "pa": 290.0
+ },
+ {
+  "owner": "Philippe S",
+  "opponent": "Dan F",
+  "wins": 5,
+  "losses": 8,
+  "pf": 1141.9199999999998,
+  "pa": 1231.0199999999998
+ },
+ {
+  "owner": "Philippe S",
+  "opponent": "Stephen R",
+  "wins": 5,
+  "losses": 11,
+  "pf": 1528.98,
+  "pa": 1719.3400000000001
+ },
+ {
+  "owner": "Philippe S",
+  "opponent": "Jacob G",
+  "wins": 2,
+  "losses": 2,
+  "pf": 386.5,
+  "pa": 385.44000000000005
+ },
+ {
+  "owner": "Philippe S",
+  "opponent": "Dave E",
+  "wins": 5,
+  "losses": 5,
+  "pf": 938.6399999999999,
+  "pa": 813.42
+ },
+ {
+  "owner": "Philippe S",
+  "opponent": "Nick W",
+  "wins": 5,
+  "losses": 2,
+  "pf": 677.6800000000001,
+  "pa": 635.08
+ },
+ {
+  "owner": "Philippe S",
+  "opponent": "Anthony K",
+  "wins": 3,
+  "losses": 6,
+  "pf": 851.8,
+  "pa": 953.8999999999999
+ },
+ {
+  "owner": "Philippe S",
+  "opponent": "Donald P",
+  "wins": 4,
+  "losses": 4,
+  "pf": 787.5999999999999,
+  "pa": 774.3199999999999
+ },
+ {
+  "owner": "Philippe S",
+  "opponent": "Ryan M",
+  "wins": 1,
+  "losses": 0,
+  "pf": 134.0,
+  "pa": 104.62
+ },
+ {
+  "owner": "Cory K",
+  "opponent": "Daniel B",
+  "wins": 1,
+  "losses": 0,
+  "pf": 109.0,
+  "pa": 76.0
+ },
+ {
+  "owner": "Cory K",
+  "opponent": "Chris F",
+  "wins": 0,
+  "losses": 2,
+  "pf": 153.0,
+  "pa": 197.0
+ },
+ {
+  "owner": "Cory K",
+  "opponent": "Tony P",
+  "wins": 1,
+  "losses": 0,
+  "pf": 70.0,
+  "pa": 63.0
+ },
+ {
+  "owner": "Cory K",
+  "opponent": "Ami S",
+  "wins": 1,
+  "losses": 0,
+  "pf": 134.0,
+  "pa": 76.0
+ },
+ {
+  "owner": "Cory K",
+  "opponent": "Philippe S",
+  "wins": 1,
+  "losses": 0,
+  "pf": 82.0,
+  "pa": 72.0
+ },
+ {
+  "owner": "Cory K",
+  "opponent": "Chip W",
+  "wins": 0,
+  "losses": 2,
+  "pf": 167.0,
+  "pa": 194.0
+ },
+ {
+  "owner": "Cory K",
+  "opponent": "Rushabh S",
+  "wins": 1,
+  "losses": 1,
+  "pf": 150.0,
+  "pa": 156.0
+ },
+ {
+  "owner": "Cory K",
+  "opponent": "Kris C",
+  "wins": 1,
+  "losses": 1,
+  "pf": 150.0,
+  "pa": 145.0
+ },
+ {
+  "owner": "Cory K",
+  "opponent": "Joby S",
+  "wins": 1,
+  "losses": 0,
+  "pf": 62.0,
+  "pa": 60.0
+ },
+ {
+  "owner": "Cory K",
+  "opponent": "Mike S",
+  "wins": 0,
+  "losses": 1,
+  "pf": 53.0,
+  "pa": 96.0
+ },
+ {
+  "owner": "Cory K",
+  "opponent": "Torre P",
+  "wins": 1,
+  "losses": 0,
+  "pf": 100.0,
+  "pa": 74.0
+ },
+ {
+  "owner": "Daniel B",
+  "opponent": "Cory K",
+  "wins": 0,
+  "losses": 1,
+  "pf": 76.0,
+  "pa": 109.0
+ },
+ {
+  "owner": "Daniel B",
+  "opponent": "Philippe S",
+  "wins": 2,
+  "losses": 4,
+  "pf": 478.0,
+  "pa": 523.0
+ },
+ {
+  "owner": "Daniel B",
+  "opponent": "Chris F",
+  "wins": 2,
+  "losses": 5,
+  "pf": 588.0,
+  "pa": 673.0
+ },
+ {
+  "owner": "Daniel B",
+  "opponent": "Tony P",
+  "wins": 0,
+  "losses": 1,
+  "pf": 65.0,
+  "pa": 83.0
+ },
+ {
+  "owner": "Daniel B",
+  "opponent": "Ami S",
+  "wins": 2,
+  "losses": 1,
+  "pf": 310.0,
+  "pa": 224.0
+ },
+ {
+  "owner": "Daniel B",
+  "opponent": "Joby S",
+  "wins": 1,
+  "losses": 1,
+  "pf": 178.0,
+  "pa": 195.0
+ },
+ {
+  "owner": "Daniel B",
+  "opponent": "Mike S",
+  "wins": 1,
+  "losses": 2,
+  "pf": 241.0,
+  "pa": 232.0
+ },
+ {
+  "owner": "Daniel B",
+  "opponent": "Torre P",
+  "wins": 3,
+  "losses": 3,
+  "pf": 610.0,
+  "pa": 484.0
+ },
+ {
+  "owner": "Daniel B",
+  "opponent": "Chip W",
+  "wins": 1,
+  "losses": 0,
+  "pf": 111.0,
+  "pa": 71.0
+ },
+ {
+  "owner": "Daniel B",
+  "opponent": "Rushabh S",
+  "wins": 1,
+  "losses": 3,
+  "pf": 358.0,
+  "pa": 389.0
+ },
+ {
+  "owner": "Daniel B",
+  "opponent": "Kris C",
+  "wins": 2,
+  "losses": 3,
+  "pf": 508.0,
+  "pa": 443.0
+ },
+ {
+  "owner": "Daniel B",
+  "opponent": "Scott M",
+  "wins": 1,
+  "losses": 3,
+  "pf": 269.0,
+  "pa": 333.0
+ },
+ {
+  "owner": "Daniel B",
+  "opponent": "Paul R",
+  "wins": 3,
+  "losses": 5,
+  "pf": 793.0,
+  "pa": 747.0
+ },
+ {
+  "owner": "Daniel B",
+  "opponent": "Tk B",
+  "wins": 1,
+  "losses": 1,
+  "pf": 200.0,
+  "pa": 183.0
+ },
+ {
+  "owner": "Daniel B",
+  "opponent": "Greg P",
+  "wins": 1,
+  "losses": 0,
+  "pf": 116.0,
+  "pa": 115.0
+ },
+ {
+  "owner": "Daniel B",
+  "opponent": "Jeff J",
+  "wins": 1,
+  "losses": 2,
+  "pf": 237.0,
+  "pa": 274.0
+ },
+ {
+  "owner": "Daniel B",
+  "opponent": "Dave K",
+  "wins": 3,
+  "losses": 1,
+  "pf": 382.0,
+  "pa": 333.0
+ },
+ {
+  "owner": "Daniel B",
+  "opponent": "Matt D",
+  "wins": 0,
+  "losses": 3,
+  "pf": 279.0,
+  "pa": 333.0
+ },
+ {
+  "owner": "Daniel B",
+  "opponent": "Dan F",
+  "wins": 3,
+  "losses": 0,
+  "pf": 278.0,
+  "pa": 228.0
+ },
+ {
+  "owner": "Daniel B",
+  "opponent": "Stephen R",
+  "wins": 0,
+  "losses": 1,
+  "pf": 96.0,
+  "pa": 116.0
+ },
+ {
+  "owner": "Chris F",
+  "opponent": "Ami S",
+  "wins": 1,
+  "losses": 2,
+  "pf": 276.0,
+  "pa": 293.0
+ },
+ {
+  "owner": "Chris F",
+  "opponent": "Cory K",
+  "wins": 2,
+  "losses": 0,
+  "pf": 197.0,
+  "pa": 153.0
+ },
+ {
+  "owner": "Chris F",
+  "opponent": "Daniel B",
+  "wins": 5,
+  "losses": 2,
+  "pf": 673.0,
+  "pa": 588.0
+ },
+ {
+  "owner": "Chris F",
+  "opponent": "Philippe S",
+  "wins": 9,
+  "losses": 8,
+  "pf": 1665.4200000000003,
+  "pa": 1639.96
+ },
+ {
+  "owner": "Chris F",
+  "opponent": "Tony P",
+  "wins": 1,
+  "losses": 0,
+  "pf": 103.0,
+  "pa": 76.0
+ },
+ {
+  "owner": "Chris F",
+  "opponent": "Rushabh S",
+  "wins": 16,
+  "losses": 9,
+  "pf": 2568.3199999999997,
+  "pa": 2329.06
+ },
+ {
+  "owner": "Chris F",
+  "opponent": "Kris C",
+  "wins": 11,
+  "losses": 10,
+  "pf": 2074.28,
+  "pa": 2000.7800000000002
+ },
+ {
+  "owner": "Chris F",
+  "opponent": "Joby S",
+  "wins": 1,
+  "losses": 1,
+  "pf": 196.0,
+  "pa": 203.0
+ },
+ {
+  "owner": "Chris F",
+  "opponent": "Mike S",
+  "wins": 0,
+  "losses": 2,
+  "pf": 158.0,
+  "pa": 186.0
+ },
+ {
+  "owner": "Chris F",
+  "opponent": "Torre P",
+  "wins": 14,
+  "losses": 12,
+  "pf": 2623.2399999999993,
+  "pa": 2477.2200000000003
+ },
+ {
+  "owner": "Chris F",
+  "opponent": "Chip W",
+  "wins": 1,
+  "losses": 0,
+  "pf": 82.0,
+  "pa": 44.0
+ },
+ {
+  "owner": "Chris F",
+  "opponent": "Paul R",
+  "wins": 7,
+  "losses": 7,
+  "pf": 1327.0800000000002,
+  "pa": 1383.08
+ },
+ {
+  "owner": "Chris F",
+  "opponent": "Greg P",
+  "wins": 1,
+  "losses": 0,
+  "pf": 123.0,
+  "pa": 44.0
+ },
+ {
+  "owner": "Chris F",
+  "opponent": "Tk B",
+  "wins": 1,
+  "losses": 1,
+  "pf": 213.0,
+  "pa": 181.0
+ },
+ {
+  "owner": "Chris F",
+  "opponent": "Scott M",
+  "wins": 10,
+  "losses": 8,
+  "pf": 1590.4000000000003,
+  "pa": 1685.1799999999998
+ },
+ {
+  "owner": "Chris F",
+  "opponent": "Dave K",
+  "wins": 3,
+  "losses": 3,
+  "pf": 539.9599999999999,
+  "pa": 507.88
+ },
+ {
+  "owner": "Chris F",
+  "opponent": "Jeff J",
+  "wins": 4,
+  "losses": 8,
+  "pf": 1228.98,
+  "pa": 1193.6399999999999
+ },
+ {
+  "owner": "Chris F",
+  "opponent": "Dan F",
+  "wins": 8,
+  "losses": 4,
+  "pf": 1232.2799999999997,
+  "pa": 1013.8
+ },
+ {
+  "owner": "Chris F",
+  "opponent": "Matt D",
+  "wins": 1,
+  "losses": 2,
+  "pf": 232.0,
+  "pa": 279.0
+ },
+ {
+  "owner": "Chris F",
+  "opponent": "Stephen R",
+  "wins": 4,
+  "losses": 8,
+  "pf": 1166.5,
+  "pa": 1274.48
+ },
+ {
+  "owner": "Chris F",
+  "opponent": "Jacob G",
+  "wins": 3,
+  "losses": 1,
+  "pf": 431.64,
+  "pa": 333.12
+ },
+ {
+  "owner": "Chris F",
+  "opponent": "Dave E",
+  "wins": 6,
+  "losses": 3,
+  "pf": 787.82,
+  "pa": 776.48
+ },
+ {
+  "owner": "Chris F",
+  "opponent": "Nick W",
+  "wins": 1,
+  "losses": 2,
+  "pf": 287.72,
+  "pa": 301.96000000000004
+ },
+ {
+  "owner": "Chris F",
+  "opponent": "Anthony K",
+  "wins": 7,
+  "losses": 1,
+  "pf": 806.34,
+  "pa": 715.26
+ },
+ {
+  "owner": "Chris F",
+  "opponent": "Donald P",
+  "wins": 6,
+  "losses": 3,
+  "pf": 995.56,
+  "pa": 810.96
+ },
+ {
+  "owner": "Ami S",
+  "opponent": "Chris F",
+  "wins": 2,
+  "losses": 1,
+  "pf": 293.0,
+  "pa": 276.0
+ },
+ {
+  "owner": "Ami S",
+  "opponent": "Tony P",
+  "wins": 1,
+  "losses": 0,
+  "pf": 83.0,
+  "pa": 66.0
+ },
+ {
+  "owner": "Ami S",
+  "opponent": "Philippe S",
+  "wins": 2,
+  "losses": 1,
+  "pf": 306.0,
+  "pa": 265.0
+ },
+ {
+  "owner": "Ami S",
+  "opponent": "Cory K",
+  "wins": 0,
+  "losses": 1,
+  "pf": 76.0,
+  "pa": 134.0
+ },
+ {
+  "owner": "Ami S",
+  "opponent": "Daniel B",
+  "wins": 1,
+  "losses": 2,
+  "pf": 224.0,
+  "pa": 310.0
+ },
+ {
+  "owner": "Ami S",
+  "opponent": "Kris C",
+  "wins": 4,
+  "losses": 2,
+  "pf": 613.0,
+  "pa": 541.0
+ },
+ {
+  "owner": "Ami S",
+  "opponent": "Joby S",
+  "wins": 1,
+  "losses": 1,
+  "pf": 224.0,
+  "pa": 200.0
+ },
+ {
+  "owner": "Ami S",
+  "opponent": "Mike S",
+  "wins": 2,
+  "losses": 2,
+  "pf": 385.0,
+  "pa": 369.0
+ },
+ {
+  "owner": "Ami S",
+  "opponent": "Torre P",
+  "wins": 1,
+  "losses": 2,
+  "pf": 287.0,
+  "pa": 310.0
+ },
+ {
+  "owner": "Ami S",
+  "opponent": "Chip W",
+  "wins": 0,
+  "losses": 1,
+  "pf": 101.0,
+  "pa": 121.0
+ },
+ {
+  "owner": "Ami S",
+  "opponent": "Rushabh S",
+  "wins": 3,
+  "losses": 1,
+  "pf": 347.0,
+  "pa": 301.0
+ },
+ {
+  "owner": "Ami S",
+  "opponent": "Tk B",
+  "wins": 0,
+  "losses": 2,
+  "pf": 165.0,
+  "pa": 225.0
+ },
+ {
+  "owner": "Ami S",
+  "opponent": "Paul R",
+  "wins": 0,
+  "losses": 4,
+  "pf": 343.0,
+  "pa": 418.0
+ },
+ {
+  "owner": "Ami S",
+  "opponent": "Greg P",
+  "wins": 0,
+  "losses": 1,
+  "pf": 88.0,
+  "pa": 94.0
+ },
+ {
+  "owner": "Ami S",
+  "opponent": "Scott M",
+  "wins": 2,
+  "losses": 0,
+  "pf": 199.0,
+  "pa": 134.0
+ },
+ {
+  "owner": "Ami S",
+  "opponent": "Dave K",
+  "wins": 0,
+  "losses": 1,
+  "pf": 72.0,
+  "pa": 87.0
+ },
+ {
+  "owner": "Ami S",
+  "opponent": "Jeff J",
+  "wins": 1,
+  "losses": 0,
+  "pf": 133.0,
+  "pa": 80.0
+ },
+ {
+  "owner": "Mike S",
+  "opponent": "Torre P",
+  "wins": 2,
+  "losses": 0,
+  "pf": 193.0,
+  "pa": 170.0
+ },
+ {
+  "owner": "Mike S",
+  "opponent": "Kris C",
+  "wins": 1,
+  "losses": 2,
+  "pf": 331.0,
+  "pa": 357.0
+ },
+ {
+  "owner": "Mike S",
+  "opponent": "Chip W",
+  "wins": 0,
+  "losses": 1,
+  "pf": 85.0,
+  "pa": 128.0
+ },
+ {
+  "owner": "Mike S",
+  "opponent": "Joby S",
+  "wins": 1,
+  "losses": 0,
+  "pf": 129.0,
+  "pa": 79.0
+ },
+ {
+  "owner": "Mike S",
+  "opponent": "Rushabh S",
+  "wins": 1,
+  "losses": 1,
+  "pf": 163.0,
+  "pa": 169.0
+ },
+ {
+  "owner": "Mike S",
+  "opponent": "Tony P",
+  "wins": 1,
+  "losses": 1,
+  "pf": 210.0,
+  "pa": 187.0
+ },
+ {
+  "owner": "Mike S",
+  "opponent": "Daniel B",
+  "wins": 2,
+  "losses": 1,
+  "pf": 232.0,
+  "pa": 241.0
+ },
+ {
+  "owner": "Mike S",
+  "opponent": "Ami S",
+  "wins": 1,
+  "losses": 3,
+  "pf": 369.0,
+  "pa": 385.0
+ },
+ {
+  "owner": "Mike S",
+  "opponent": "Chris F",
+  "wins": 2,
+  "losses": 0,
+  "pf": 186.0,
+  "pa": 158.0
+ },
+ {
+  "owner": "Mike S",
+  "opponent": "Cory K",
+  "wins": 1,
+  "losses": 0,
+  "pf": 96.0,
+  "pa": 53.0
+ },
+ {
+  "owner": "Mike S",
+  "opponent": "Philippe S",
+  "wins": 0,
+  "losses": 3,
+  "pf": 191.0,
+  "pa": 320.0
+ },
+ {
+  "owner": "Mike S",
+  "opponent": "Scott M",
+  "wins": 0,
+  "losses": 1,
+  "pf": 80.0,
+  "pa": 80.0
+ },
+ {
+  "owner": "Mike S",
+  "opponent": "Tk B",
+  "wins": 1,
+  "losses": 0,
+  "pf": 123.0,
+  "pa": 67.0
+ },
+ {
+  "owner": "Mike S",
+  "opponent": "Greg P",
+  "wins": 1,
+  "losses": 0,
+  "pf": 98.0,
+  "pa": 80.0
+ },
+ {
+  "owner": "Mike S",
+  "opponent": "Paul R",
+  "wins": 0,
+  "losses": 1,
+  "pf": 38.0,
+  "pa": 103.0
+ },
+ {
+  "owner": "Torre P",
+  "opponent": "Mike S",
+  "wins": 0,
+  "losses": 2,
+  "pf": 170.0,
+  "pa": 193.0
+ },
+ {
+  "owner": "Torre P",
+  "opponent": "Joby S",
+  "wins": 1,
+  "losses": 0,
+  "pf": 134.0,
+  "pa": 88.0
+ },
+ {
+  "owner": "Torre P",
+  "opponent": "Kris C",
+  "wins": 8,
+  "losses": 8,
+  "pf": 1532.7800000000002,
+  "pa": 1482.02
+ },
+ {
+  "owner": "Torre P",
+  "opponent": "Rushabh S",
+  "wins": 9,
+  "losses": 7,
+  "pf": 1723.2400000000002,
+  "pa": 1655.4200000000003
+ },
+ {
+  "owner": "Torre P",
+  "opponent": "Chip W",
+  "wins": 1,
+  "losses": 0,
+  "pf": 107.0,
+  "pa": 90.0
+ },
+ {
+  "owner": "Torre P",
+  "opponent": "Philippe S",
+  "wins": 13,
+  "losses": 7,
+  "pf": 1855.38,
+  "pa": 1724.78
+ },
+ {
+  "owner": "Torre P",
+  "opponent": "Tony P",
+  "wins": 2,
+  "losses": 0,
+  "pf": 202.0,
+  "pa": 146.0
+ },
+ {
+  "owner": "Torre P",
+  "opponent": "Daniel B",
+  "wins": 3,
+  "losses": 3,
+  "pf": 484.0,
+  "pa": 610.0
+ },
+ {
+  "owner": "Torre P",
+  "opponent": "Ami S",
+  "wins": 2,
+  "losses": 1,
+  "pf": 310.0,
+  "pa": 287.0
+ },
+ {
+  "owner": "Torre P",
+  "opponent": "Chris F",
+  "wins": 11,
+  "losses": 15,
+  "pf": 2477.2200000000003,
+  "pa": 2623.2399999999993
+ },
+ {
+  "owner": "Torre P",
+  "opponent": "Cory K",
+  "wins": 0,
+  "losses": 1,
+  "pf": 74.0,
+  "pa": 100.0
+ },
+ {
+  "owner": "Torre P",
+  "opponent": "Scott M",
+  "wins": 10,
+  "losses": 6,
+  "pf": 1657.7200000000003,
+  "pa": 1645.1
+ },
+ {
+  "owner": "Torre P",
+  "opponent": "Greg P",
+  "wins": 1,
+  "losses": 1,
+  "pf": 198.0,
+  "pa": 166.0
+ },
+ {
+  "owner": "Torre P",
+  "opponent": "Paul R",
+  "wins": 8,
+  "losses": 12,
+  "pf": 1930.8799999999997,
+  "pa": 1851.4199999999998
+ },
+ {
+  "owner": "Torre P",
+  "opponent": "Tk B",
+  "wins": 1,
+  "losses": 2,
+  "pf": 228.0,
+  "pa": 273.0
+ },
+ {
+  "owner": "Torre P",
+  "opponent": "Jeff J",
+  "wins": 10,
+  "losses": 5,
+  "pf": 1457.6599999999999,
+  "pa": 1286.3400000000001
+ },
+ {
+  "owner": "Torre P",
+  "opponent": "Dave K",
+  "wins": 1,
+  "losses": 4,
+  "pf": 371.0,
+  "pa": 442.0
+ },
+ {
+  "owner": "Torre P",
+  "opponent": "Matt D",
+  "wins": 2,
+  "losses": 3,
+  "pf": 395.0,
+  "pa": 437.0
+ },
+ {
+  "owner": "Torre P",
+  "opponent": "Dan F",
+  "wins": 7,
+  "losses": 5,
+  "pf": 1228.42,
+  "pa": 1156.66
+ },
+ {
+  "owner": "Torre P",
+  "opponent": "Stephen R",
+  "wins": 6,
+  "losses": 8,
+  "pf": 1401.2599999999998,
+  "pa": 1384.6600000000003
+ },
+ {
+  "owner": "Torre P",
+  "opponent": "Nick W",
+  "wins": 4,
+  "losses": 6,
+  "pf": 1022.4599999999998,
+  "pa": 1042.86
+ },
+ {
+  "owner": "Torre P",
+  "opponent": "Dave E",
+  "wins": 10,
+  "losses": 3,
+  "pf": 1345.2199999999998,
+  "pa": 1052.52
+ },
+ {
+  "owner": "Torre P",
+  "opponent": "Jacob G",
+  "wins": 2,
+  "losses": 1,
+  "pf": 297.84000000000003,
+  "pa": 275.9
+ },
+ {
+  "owner": "Torre P",
+  "opponent": "Anthony K",
+  "wins": 4,
+  "losses": 2,
+  "pf": 574.4200000000001,
+  "pa": 508.56000000000006
+ },
+ {
+  "owner": "Torre P",
+  "opponent": "Donald P",
+  "wins": 4,
+  "losses": 5,
+  "pf": 914.18,
+  "pa": 895.86
+ },
+ {
+  "owner": "Torre P",
+  "opponent": "Ryan M",
+  "wins": 1,
+  "losses": 0,
+  "pf": 101.02,
+  "pa": 58.18
+ },
+ {
+  "owner": "Chip W",
+  "opponent": "Joby S",
+  "wins": 0,
+  "losses": 1,
+  "pf": 83.0,
+  "pa": 98.0
+ },
+ {
+  "owner": "Chip W",
+  "opponent": "Rushabh S",
+  "wins": 0,
+  "losses": 1,
+  "pf": 71.0,
+  "pa": 99.0
+ },
+ {
+  "owner": "Chip W",
+  "opponent": "Mike S",
+  "wins": 1,
+  "losses": 0,
+  "pf": 128.0,
+  "pa": 85.0
+ },
+ {
+  "owner": "Chip W",
+  "opponent": "Kris C",
+  "wins": 1,
+  "losses": 0,
+  "pf": 106.0,
+  "pa": 90.0
+ },
+ {
+  "owner": "Chip W",
+  "opponent": "Torre P",
+  "wins": 0,
+  "losses": 1,
+  "pf": 90.0,
+  "pa": 107.0
+ },
+ {
+  "owner": "Chip W",
+  "opponent": "Cory K",
+  "wins": 2,
+  "losses": 0,
+  "pf": 194.0,
+  "pa": 167.0
+ },
+ {
+  "owner": "Chip W",
+  "opponent": "Philippe S",
+  "wins": 2,
+  "losses": 0,
+  "pf": 210.0,
+  "pa": 162.0
+ },
+ {
+  "owner": "Chip W",
+  "opponent": "Tony P",
+  "wins": 1,
+  "losses": 1,
+  "pf": 189.0,
+  "pa": 185.0
+ },
+ {
+  "owner": "Chip W",
+  "opponent": "Daniel B",
+  "wins": 0,
+  "losses": 1,
+  "pf": 71.0,
+  "pa": 111.0
+ },
+ {
+  "owner": "Chip W",
+  "opponent": "Ami S",
+  "wins": 1,
+  "losses": 0,
+  "pf": 121.0,
+  "pa": 101.0
+ },
+ {
+  "owner": "Chip W",
+  "opponent": "Chris F",
+  "wins": 0,
+  "losses": 1,
+  "pf": 44.0,
+  "pa": 82.0
+ },
+ {
+  "owner": "Joby S",
+  "opponent": "Chip W",
+  "wins": 1,
+  "losses": 0,
+  "pf": 98.0,
+  "pa": 83.0
+ },
+ {
+  "owner": "Joby S",
+  "opponent": "Torre P",
+  "wins": 0,
+  "losses": 1,
+  "pf": 88.0,
+  "pa": 134.0
+ },
+ {
+  "owner": "Joby S",
+  "opponent": "Rushabh S",
+  "wins": 0,
+  "losses": 1,
+  "pf": 95.0,
+  "pa": 103.0
+ },
+ {
+  "owner": "Joby S",
+  "opponent": "Mike S",
+  "wins": 0,
+  "losses": 1,
+  "pf": 79.0,
+  "pa": 129.0
+ },
+ {
+  "owner": "Joby S",
+  "opponent": "Kris C",
+  "wins": 1,
+  "losses": 0,
+  "pf": 83.0,
+  "pa": 75.0
+ },
+ {
+  "owner": "Joby S",
+  "opponent": "Daniel B",
+  "wins": 1,
+  "losses": 1,
+  "pf": 195.0,
+  "pa": 178.0
+ },
+ {
+  "owner": "Joby S",
+  "opponent": "Ami S",
+  "wins": 1,
+  "losses": 1,
+  "pf": 200.0,
+  "pa": 224.0
+ },
+ {
+  "owner": "Joby S",
+  "opponent": "Chris F",
+  "wins": 1,
+  "losses": 1,
+  "pf": 203.0,
+  "pa": 196.0
+ },
+ {
+  "owner": "Joby S",
+  "opponent": "Cory K",
+  "wins": 0,
+  "losses": 1,
+  "pf": 60.0,
+  "pa": 62.0
+ },
+ {
+  "owner": "Joby S",
+  "opponent": "Philippe S",
+  "wins": 1,
+  "losses": 0,
+  "pf": 110.0,
+  "pa": 59.0
+ },
+ {
+  "owner": "Joby S",
+  "opponent": "Tony P",
+  "wins": 1,
+  "losses": 0,
+  "pf": 82.0,
+  "pa": 77.0
+ },
+ {
+  "owner": "Rushabh S",
+  "opponent": "Kris C",
+  "wins": 10,
+  "losses": 5,
+  "pf": 1581.88,
+  "pa": 1460.46
+ },
+ {
+  "owner": "Rushabh S",
+  "opponent": "Chip W",
+  "wins": 1,
+  "losses": 0,
+  "pf": 99.0,
+  "pa": 71.0
+ },
+ {
+  "owner": "Rushabh S",
+  "opponent": "Joby S",
+  "wins": 1,
+  "losses": 0,
+  "pf": 103.0,
+  "pa": 95.0
+ },
+ {
+  "owner": "Rushabh S",
+  "opponent": "Torre P",
+  "wins": 7,
+  "losses": 9,
+  "pf": 1655.4200000000003,
+  "pa": 1723.2400000000002
+ },
+ {
+  "owner": "Rushabh S",
+  "opponent": "Mike S",
+  "wins": 1,
+  "losses": 1,
+  "pf": 169.0,
+  "pa": 163.0
+ },
+ {
+  "owner": "Rushabh S",
+  "opponent": "Chris F",
+  "wins": 9,
+  "losses": 16,
+  "pf": 2329.06,
+  "pa": 2568.3199999999997
+ },
+ {
+  "owner": "Rushabh S",
+  "opponent": "Cory K",
+  "wins": 1,
+  "losses": 1,
+  "pf": 156.0,
+  "pa": 150.0
+ },
+ {
+  "owner": "Rushabh S",
+  "opponent": "Philippe S",
+  "wins": 10,
+  "losses": 8,
+  "pf": 1721.26,
+  "pa": 1575.78
+ },
+ {
+  "owner": "Rushabh S",
+  "opponent": "Tony P",
+  "wins": 0,
+  "losses": 1,
+  "pf": 57.0,
+  "pa": 80.0
+ },
+ {
+  "owner": "Rushabh S",
+  "opponent": "Daniel B",
+  "wins": 3,
+  "losses": 1,
+  "pf": 389.0,
+  "pa": 358.0
+ },
+ {
+  "owner": "Rushabh S",
+  "opponent": "Ami S",
+  "wins": 1,
+  "losses": 3,
+  "pf": 301.0,
+  "pa": 347.0
+ },
+ {
+  "owner": "Rushabh S",
+  "opponent": "Scott M",
+  "wins": 8,
+  "losses": 7,
+  "pf": 1448.9799999999998,
+  "pa": 1370.3
+ },
+ {
+  "owner": "Rushabh S",
+  "opponent": "Tk B",
+  "wins": 1,
+  "losses": 2,
+  "pf": 257.0,
+  "pa": 268.0
+ },
+ {
+  "owner": "Rushabh S",
+  "opponent": "Greg P",
+  "wins": 0,
+  "losses": 1,
+  "pf": 76.0,
+  "pa": 118.0
+ },
+ {
+  "owner": "Rushabh S",
+  "opponent": "Paul R",
+  "wins": 11,
+  "losses": 6,
+  "pf": 1618.02,
+  "pa": 1508.34
+ },
+ {
+  "owner": "Rushabh S",
+  "opponent": "Jeff J",
+  "wins": 5,
+  "losses": 8,
+  "pf": 1076.94,
+  "pa": 1186.8999999999999
+ },
+ {
+  "owner": "Rushabh S",
+  "opponent": "Dave K",
+  "wins": 5,
+  "losses": 1,
+  "pf": 643.56,
+  "pa": 529.86
+ },
+ {
+  "owner": "Rushabh S",
+  "opponent": "Matt D",
+  "wins": 2,
+  "losses": 1,
+  "pf": 302.0,
+  "pa": 282.0
+ },
+ {
+  "owner": "Rushabh S",
+  "opponent": "Dan F",
+  "wins": 7,
+  "losses": 7,
+  "pf": 1283.0,
+  "pa": 1272.66
+ },
+ {
+  "owner": "Rushabh S",
+  "opponent": "Stephen R",
+  "wins": 7,
+  "losses": 7,
+  "pf": 1471.28,
+  "pa": 1412.8600000000001
+ },
+ {
+  "owner": "Rushabh S",
+  "opponent": "Nick W",
+  "wins": 3,
+  "losses": 5,
+  "pf": 770.22,
+  "pa": 771.24
+ },
+ {
+  "owner": "Rushabh S",
+  "opponent": "Jacob G",
+  "wins": 3,
+  "losses": 0,
+  "pf": 397.46000000000004,
+  "pa": 272.36
+ },
+ {
+  "owner": "Rushabh S",
+  "opponent": "Dave E",
+  "wins": 4,
+  "losses": 0,
+  "pf": 372.6,
+  "pa": 240.26
+ },
+ {
+  "owner": "Rushabh S",
+  "opponent": "Anthony K",
+  "wins": 4,
+  "losses": 4,
+  "pf": 685.5200000000001,
+  "pa": 669.4599999999999
+ },
+ {
+  "owner": "Rushabh S",
+  "opponent": "Donald P",
+  "wins": 3,
+  "losses": 8,
+  "pf": 926.8199999999999,
+  "pa": 990.0199999999999
+ },
+ {
+  "owner": "Rushabh S",
+  "opponent": "Ryan M",
+  "wins": 1,
+  "losses": 0,
+  "pf": 126.8,
+  "pa": 97.22
+ },
+ {
+  "owner": "Kris C",
+  "opponent": "Rushabh S",
+  "wins": 5,
+  "losses": 10,
+  "pf": 1460.46,
+  "pa": 1581.88
+ },
+ {
+  "owner": "Kris C",
+  "opponent": "Mike S",
+  "wins": 2,
+  "losses": 1,
+  "pf": 357.0,
+  "pa": 331.0
+ },
+ {
+  "owner": "Kris C",
+  "opponent": "Torre P",
+  "wins": 8,
+  "losses": 8,
+  "pf": 1482.02,
+  "pa": 1532.7800000000002
+ },
+ {
+  "owner": "Kris C",
+  "opponent": "Chip W",
+  "wins": 0,
+  "losses": 1,
+  "pf": 90.0,
+  "pa": 106.0
+ },
+ {
+  "owner": "Kris C",
+  "opponent": "Joby S",
+  "wins": 0,
+  "losses": 1,
+  "pf": 75.0,
+  "pa": 83.0
+ },
+ {
+  "owner": "Kris C",
+  "opponent": "Ami S",
+  "wins": 1,
+  "losses": 5,
+  "pf": 541.0,
+  "pa": 613.0
+ },
+ {
+  "owner": "Kris C",
+  "opponent": "Chris F",
+  "wins": 10,
+  "losses": 11,
+  "pf": 2000.7800000000002,
+  "pa": 2074.28
+ },
+ {
+  "owner": "Kris C",
+  "opponent": "Cory K",
+  "wins": 1,
+  "losses": 1,
+  "pf": 145.0,
+  "pa": 150.0
+ },
+ {
+  "owner": "Kris C",
+  "opponent": "Philippe S",
+  "wins": 8,
+  "losses": 11,
+  "pf": 1735.86,
+  "pa": 1738.98
+ },
+ {
+  "owner": "Kris C",
+  "opponent": "Tony P",
+  "wins": 0,
+  "losses": 1,
+  "pf": 92.0,
+  "pa": 117.0
+ },
+ {
+  "owner": "Kris C",
+  "opponent": "Daniel B",
+  "wins": 3,
+  "losses": 2,
+  "pf": 443.0,
+  "pa": 508.0
+ },
+ {
+  "owner": "Kris C",
+  "opponent": "Scott M",
+  "wins": 6,
+  "losses": 11,
+  "pf": 1515.3000000000002,
+  "pa": 1612.6799999999998
+ },
+ {
+  "owner": "Kris C",
+  "opponent": "Tk B",
+  "wins": 0,
+  "losses": 2,
+  "pf": 136.0,
+  "pa": 222.0
+ },
+ {
+  "owner": "Kris C",
+  "opponent": "Greg P",
+  "wins": 0,
+  "losses": 1,
+  "pf": 80.0,
+  "pa": 101.0
+ },
+ {
+  "owner": "Kris C",
+  "opponent": "Paul R",
+  "wins": 8,
+  "losses": 8,
+  "pf": 1442.42,
+  "pa": 1411.04
+ },
+ {
+  "owner": "Kris C",
+  "opponent": "Jeff J",
+  "wins": 12,
+  "losses": 5,
+  "pf": 1625.1999999999998,
+  "pa": 1538.4799999999998
+ },
+ {
+  "owner": "Kris C",
+  "opponent": "Dave K",
+  "wins": 5,
+  "losses": 2,
+  "pf": 643.06,
+  "pa": 561.4399999999999
+ },
+ {
+  "owner": "Kris C",
+  "opponent": "Matt D",
+  "wins": 3,
+  "losses": 1,
+  "pf": 290.0,
+  "pa": 296.0
+ },
+ {
+  "owner": "Kris C",
+  "opponent": "Dan F",
+  "wins": 12,
+  "losses": 6,
+  "pf": 1897.9000000000003,
+  "pa": 1632.0199999999998
+ },
+ {
+  "owner": "Kris C",
+  "opponent": "Stephen R",
+  "wins": 7,
+  "losses": 6,
+  "pf": 1374.96,
+  "pa": 1300.14
+ },
+ {
+  "owner": "Kris C",
+  "opponent": "Nick W",
+  "wins": 2,
+  "losses": 6,
+  "pf": 725.98,
+  "pa": 813.5999999999999
+ },
+ {
+  "owner": "Kris C",
+  "opponent": "Jacob G",
+  "wins": 0,
+  "losses": 3,
+  "pf": 230.96,
+  "pa": 379.98
+ },
+ {
+  "owner": "Kris C",
+  "opponent": "Dave E",
+  "wins": 8,
+  "losses": 1,
+  "pf": 783.36,
+  "pa": 470.15999999999997
+ },
+ {
+  "owner": "Kris C",
+  "opponent": "Anthony K",
+  "wins": 7,
+  "losses": 3,
+  "pf": 1021.9599999999999,
+  "pa": 862.92
+ },
+ {
+  "owner": "Kris C",
+  "opponent": "Donald P",
+  "wins": 7,
+  "losses": 2,
+  "pf": 968.5,
+  "pa": 768.6200000000001
+ },
+ {
+  "owner": "Paul R",
+  "opponent": "Chris F",
+  "wins": 7,
+  "losses": 7,
+  "pf": 1383.08,
+  "pa": 1327.0800000000002
+ },
+ {
+  "owner": "Paul R",
+  "opponent": "Greg P",
+  "wins": 0,
+  "losses": 1,
+  "pf": 91.0,
+  "pa": 107.0
+ },
+ {
+  "owner": "Paul R",
+  "opponent": "Ami S",
+  "wins": 3,
+  "losses": 1,
+  "pf": 418.0,
+  "pa": 343.0
+ },
+ {
+  "owner": "Paul R",
+  "opponent": "Tk B",
+  "wins": 1,
+  "losses": 1,
+  "pf": 206.0,
+  "pa": 212.0
+ },
+ {
+  "owner": "Paul R",
+  "opponent": "Philippe S",
+  "wins": 6,
+  "losses": 10,
+  "pf": 1268.3799999999999,
+  "pa": 1553.98
+ },
+ {
+  "owner": "Paul R",
+  "opponent": "Daniel B",
+  "wins": 5,
+  "losses": 3,
+  "pf": 747.0,
+  "pa": 793.0
+ },
+ {
+  "owner": "Paul R",
+  "opponent": "Torre P",
+  "wins": 12,
+  "losses": 8,
+  "pf": 1851.4199999999998,
+  "pa": 1930.8799999999997
+ },
+ {
+  "owner": "Paul R",
+  "opponent": "Scott M",
+  "wins": 4,
+  "losses": 8,
+  "pf": 1067.82,
+  "pa": 1131.6999999999998
+ },
+ {
+  "owner": "Paul R",
+  "opponent": "Rushabh S",
+  "wins": 6,
+  "losses": 11,
+  "pf": 1508.34,
+  "pa": 1618.02
+ },
+ {
+  "owner": "Paul R",
+  "opponent": "Kris C",
+  "wins": 8,
+  "losses": 8,
+  "pf": 1411.04,
+  "pa": 1442.42
+ },
+ {
+  "owner": "Paul R",
+  "opponent": "Mike S",
+  "wins": 1,
+  "losses": 0,
+  "pf": 103.0,
+  "pa": 38.0
+ },
+ {
+  "owner": "Paul R",
+  "opponent": "Dave K",
+  "wins": 3,
+  "losses": 3,
+  "pf": 463.46,
+  "pa": 479.15999999999997
+ },
+ {
+  "owner": "Paul R",
+  "opponent": "Jeff J",
+  "wins": 8,
+  "losses": 7,
+  "pf": 1444.7599999999998,
+  "pa": 1338.32
+ },
+ {
+  "owner": "Paul R",
+  "opponent": "Dan F",
+  "wins": 8,
+  "losses": 5,
+  "pf": 1197.7399999999998,
+  "pa": 1183.56
+ },
+ {
+  "owner": "Paul R",
+  "opponent": "Matt D",
+  "wins": 1,
+  "losses": 2,
+  "pf": 234.0,
+  "pa": 272.0
+ },
+ {
+  "owner": "Paul R",
+  "opponent": "Stephen R",
+  "wins": 12,
+  "losses": 8,
+  "pf": 2031.8600000000001,
+  "pa": 1805.18
+ },
+ {
+  "owner": "Paul R",
+  "opponent": "Dave E",
+  "wins": 4,
+  "losses": 6,
+  "pf": 910.5799999999999,
+  "pa": 933.9
+ },
+ {
+  "owner": "Paul R",
+  "opponent": "Jacob G",
+  "wins": 2,
+  "losses": 1,
+  "pf": 296.15999999999997,
+  "pa": 285.9
+ },
+ {
+  "owner": "Paul R",
+  "opponent": "Nick W",
+  "wins": 4,
+  "losses": 6,
+  "pf": 927.9000000000001,
+  "pa": 959.94
+ },
+ {
+  "owner": "Paul R",
+  "opponent": "Anthony K",
+  "wins": 8,
+  "losses": 1,
+  "pf": 957.76,
+  "pa": 776.1999999999999
+ },
+ {
+  "owner": "Paul R",
+  "opponent": "Donald P",
+  "wins": 6,
+  "losses": 3,
+  "pf": 910.74,
+  "pa": 834.88
+ },
+ {
+  "owner": "Paul R",
+  "opponent": "Ryan M",
+  "wins": 0,
+  "losses": 1,
+  "pf": 96.66,
+  "pa": 123.82
+ },
+ {
+  "owner": "Greg P",
+  "opponent": "Tk B",
+  "wins": 1,
+  "losses": 0,
+  "pf": 81.0,
+  "pa": 66.0
+ },
+ {
+  "owner": "Greg P",
+  "opponent": "Paul R",
+  "wins": 1,
+  "losses": 0,
+  "pf": 107.0,
+  "pa": 91.0
+ },
+ {
+  "owner": "Greg P",
+  "opponent": "Chris F",
+  "wins": 0,
+  "losses": 1,
+  "pf": 44.0,
+  "pa": 123.0
+ },
+ {
+  "owner": "Greg P",
+  "opponent": "Philippe S",
+  "wins": 1,
+  "losses": 1,
+  "pf": 191.0,
+  "pa": 190.0
+ },
+ {
+  "owner": "Greg P",
+  "opponent": "Ami S",
+  "wins": 1,
+  "losses": 0,
+  "pf": 94.0,
+  "pa": 88.0
+ },
+ {
+  "owner": "Greg P",
+  "opponent": "Torre P",
+  "wins": 1,
+  "losses": 1,
+  "pf": 166.0,
+  "pa": 198.0
+ },
+ {
+  "owner": "Greg P",
+  "opponent": "Scott M",
+  "wins": 2,
+  "losses": 0,
+  "pf": 198.0,
+  "pa": 93.0
+ },
+ {
+  "owner": "Greg P",
+  "opponent": "Rushabh S",
+  "wins": 1,
+  "losses": 0,
+  "pf": 118.0,
+  "pa": 76.0
+ },
+ {
+  "owner": "Greg P",
+  "opponent": "Kris C",
+  "wins": 1,
+  "losses": 0,
+  "pf": 101.0,
+  "pa": 80.0
+ },
+ {
+  "owner": "Greg P",
+  "opponent": "Mike S",
+  "wins": 0,
+  "losses": 1,
+  "pf": 80.0,
+  "pa": 98.0
+ },
+ {
+  "owner": "Greg P",
+  "opponent": "Daniel B",
+  "wins": 0,
+  "losses": 1,
+  "pf": 115.0,
+  "pa": 116.0
+ },
+ {
+  "owner": "Tk B",
+  "opponent": "Greg P",
+  "wins": 0,
+  "losses": 1,
+  "pf": 66.0,
+  "pa": 81.0
+ },
+ {
+  "owner": "Tk B",
+  "opponent": "Ami S",
+  "wins": 2,
+  "losses": 0,
+  "pf": 225.0,
+  "pa": 165.0
+ },
+ {
+  "owner": "Tk B",
+  "opponent": "Philippe S",
+  "wins": 1,
+  "losses": 2,
+  "pf": 265.0,
+  "pa": 287.0
+ },
+ {
+  "owner": "Tk B",
+  "opponent": "Paul R",
+  "wins": 1,
+  "losses": 1,
+  "pf": 212.0,
+  "pa": 206.0
+ },
+ {
+  "owner": "Tk B",
+  "opponent": "Chris F",
+  "wins": 1,
+  "losses": 1,
+  "pf": 181.0,
+  "pa": 213.0
+ },
+ {
+  "owner": "Tk B",
+  "opponent": "Scott M",
+  "wins": 2,
+  "losses": 2,
+  "pf": 278.0,
+  "pa": 317.0
+ },
+ {
+  "owner": "Tk B",
+  "opponent": "Rushabh S",
+  "wins": 2,
+  "losses": 1,
+  "pf": 268.0,
+  "pa": 257.0
+ },
+ {
+  "owner": "Tk B",
+  "opponent": "Kris C",
+  "wins": 2,
+  "losses": 0,
+  "pf": 222.0,
+  "pa": 136.0
+ },
+ {
+  "owner": "Tk B",
+  "opponent": "Mike S",
+  "wins": 0,
+  "losses": 1,
+  "pf": 67.0,
+  "pa": 123.0
+ },
+ {
+  "owner": "Tk B",
+  "opponent": "Daniel B",
+  "wins": 1,
+  "losses": 1,
+  "pf": 183.0,
+  "pa": 200.0
+ },
+ {
+  "owner": "Tk B",
+  "opponent": "Torre P",
+  "wins": 2,
+  "losses": 1,
+  "pf": 273.0,
+  "pa": 228.0
+ },
+ {
+  "owner": "Tk B",
+  "opponent": "Dave K",
+  "wins": 0,
+  "losses": 1,
+  "pf": 80.0,
+  "pa": 109.0
+ },
+ {
+  "owner": "Tk B",
+  "opponent": "Jeff J",
+  "wins": 0,
+  "losses": 1,
+  "pf": 55.0,
+  "pa": 105.0
+ },
+ {
+  "owner": "Scott M",
+  "opponent": "Torre P",
+  "wins": 6,
+  "losses": 10,
+  "pf": 1645.1,
+  "pa": 1657.7200000000003
+ },
+ {
+  "owner": "Scott M",
+  "opponent": "Kris C",
+  "wins": 11,
+  "losses": 6,
+  "pf": 1612.6799999999998,
+  "pa": 1515.3000000000002
+ },
+ {
+  "owner": "Scott M",
+  "opponent": "Mike S",
+  "wins": 0,
+  "losses": 1,
+  "pf": 80.0,
+  "pa": 80.0
+ },
+ {
+  "owner": "Scott M",
+  "opponent": "Daniel B",
+  "wins": 3,
+  "losses": 1,
+  "pf": 333.0,
+  "pa": 269.0
+ },
+ {
+  "owner": "Scott M",
+  "opponent": "Rushabh S",
+  "wins": 7,
+  "losses": 8,
+  "pf": 1370.3,
+  "pa": 1448.9799999999998
+ },
+ {
+  "owner": "Scott M",
+  "opponent": "Tk B",
+  "wins": 2,
+  "losses": 2,
+  "pf": 317.0,
+  "pa": 278.0
+ },
+ {
+  "owner": "Scott M",
+  "opponent": "Greg P",
+  "wins": 0,
+  "losses": 2,
+  "pf": 93.0,
+  "pa": 198.0
+ },
+ {
+  "owner": "Scott M",
+  "opponent": "Paul R",
+  "wins": 8,
+  "losses": 4,
+  "pf": 1131.6999999999998,
+  "pa": 1067.82
+ },
+ {
+  "owner": "Scott M",
+  "opponent": "Philippe S",
+  "wins": 9,
+  "losses": 11,
+  "pf": 1822.3600000000004,
+  "pa": 1817.98
+ },
+ {
+  "owner": "Scott M",
+  "opponent": "Ami S",
+  "wins": 0,
+  "losses": 2,
+  "pf": 134.0,
+  "pa": 199.0
+ },
+ {
+  "owner": "Scott M",
+  "opponent": "Chris F",
+  "wins": 8,
+  "losses": 10,
+  "pf": 1685.1799999999998,
+  "pa": 1590.4000000000003
+ },
+ {
+  "owner": "Scott M",
+  "opponent": "Jeff J",
+  "wins": 10,
+  "losses": 6,
+  "pf": 1560.14,
+  "pa": 1424.06
+ },
+ {
+  "owner": "Scott M",
+  "opponent": "Dave K",
+  "wins": 4,
+  "losses": 4,
+  "pf": 725.02,
+  "pa": 718.58
+ },
+ {
+  "owner": "Scott M",
+  "opponent": "Matt D",
+  "wins": 3,
+  "losses": 2,
+  "pf": 470.0,
+  "pa": 450.0
+ },
+ {
+  "owner": "Scott M",
+  "opponent": "Dan F",
+  "wins": 7,
+  "losses": 10,
+  "pf": 1537.12,
+  "pa": 1536.1800000000003
+ },
+ {
+  "owner": "Scott M",
+  "opponent": "Stephen R",
+  "wins": 5,
+  "losses": 8,
+  "pf": 1291.44,
+  "pa": 1176.18
+ },
+ {
+  "owner": "Scott M",
+  "opponent": "Nick W",
+  "wins": 6,
+  "losses": 3,
+  "pf": 894.9200000000001,
+  "pa": 814.22
+ },
+ {
+  "owner": "Scott M",
+  "opponent": "Dave E",
+  "wins": 10,
+  "losses": 2,
+  "pf": 1153.0,
+  "pa": 780.3399999999999
+ },
+ {
+  "owner": "Scott M",
+  "opponent": "Jacob G",
+  "wins": 1,
+  "losses": 2,
+  "pf": 228.8,
+  "pa": 233.56
+ },
+ {
+  "owner": "Scott M",
+  "opponent": "Anthony K",
+  "wins": 6,
+  "losses": 4,
+  "pf": 945.1199999999999,
+  "pa": 918.0200000000001
+ },
+ {
+  "owner": "Scott M",
+  "opponent": "Donald P",
+  "wins": 5,
+  "losses": 2,
+  "pf": 629.28,
+  "pa": 602.68
+ },
+ {
+  "owner": "Scott M",
+  "opponent": "Ryan M",
+  "wins": 0,
+  "losses": 1,
+  "pf": 69.76,
+  "pa": 111.62
+ },
+ {
+  "owner": "Dave K",
+  "opponent": "Chris F",
+  "wins": 3,
+  "losses": 3,
+  "pf": 507.88,
+  "pa": 539.9599999999999
+ },
+ {
+  "owner": "Dave K",
+  "opponent": "Paul R",
+  "wins": 3,
+  "losses": 3,
+  "pf": 479.15999999999997,
+  "pa": 463.46
+ },
+ {
+  "owner": "Dave K",
+  "opponent": "Ami S",
+  "wins": 1,
+  "losses": 0,
+  "pf": 87.0,
+  "pa": 72.0
+ },
+ {
+  "owner": "Dave K",
+  "opponent": "Tk B",
+  "wins": 1,
+  "losses": 0,
+  "pf": 109.0,
+  "pa": 80.0
+ },
+ {
+  "owner": "Dave K",
+  "opponent": "Philippe S",
+  "wins": 1,
+  "losses": 5,
+  "pf": 448.28,
+  "pa": 581.04
+ },
+ {
+  "owner": "Dave K",
+  "opponent": "Jeff J",
+  "wins": 4,
+  "losses": 5,
+  "pf": 779.04,
+  "pa": 902.6600000000001
+ },
+ {
+  "owner": "Dave K",
+  "opponent": "Daniel B",
+  "wins": 1,
+  "losses": 3,
+  "pf": 333.0,
+  "pa": 382.0
+ },
+ {
+  "owner": "Dave K",
+  "opponent": "Torre P",
+  "wins": 4,
+  "losses": 1,
+  "pf": 442.0,
+  "pa": 371.0
+ },
+ {
+  "owner": "Dave K",
+  "opponent": "Scott M",
+  "wins": 4,
+  "losses": 4,
+  "pf": 718.58,
+  "pa": 725.02
+ },
+ {
+  "owner": "Dave K",
+  "opponent": "Rushabh S",
+  "wins": 1,
+  "losses": 5,
+  "pf": 529.86,
+  "pa": 643.56
+ },
+ {
+  "owner": "Dave K",
+  "opponent": "Kris C",
+  "wins": 2,
+  "losses": 5,
+  "pf": 561.4399999999999,
+  "pa": 643.06
+ },
+ {
+  "owner": "Dave K",
+  "opponent": "Matt D",
+  "wins": 0,
+  "losses": 4,
+  "pf": 341.0,
+  "pa": 413.0
+ },
+ {
+  "owner": "Dave K",
+  "opponent": "Dan F",
+  "wins": 3,
+  "losses": 2,
+  "pf": 459.44,
+  "pa": 438.53999999999996
+ },
+ {
+  "owner": "Dave K",
+  "opponent": "Stephen R",
+  "wins": 1,
+  "losses": 4,
+  "pf": 468.5,
+  "pa": 484.40000000000003
+ },
+ {
+  "owner": "Dave K",
+  "opponent": "Dave E",
+  "wins": 1,
+  "losses": 1,
+  "pf": 216.07999999999998,
+  "pa": 168.14
+ },
+ {
+  "owner": "Dave K",
+  "opponent": "Nick W",
+  "wins": 2,
+  "losses": 0,
+  "pf": 222.2,
+  "pa": 133.7
+ },
+ {
+  "owner": "Dave K",
+  "opponent": "Jacob G",
+  "wins": 1,
+  "losses": 1,
+  "pf": 197.16,
+  "pa": 204.36
+ },
+ {
+  "owner": "Dave K",
+  "opponent": "Anthony K",
+  "wins": 1,
+  "losses": 0,
+  "pf": 123.3,
+  "pa": 91.02
+ },
+ {
+  "owner": "Jeff J",
+  "opponent": "Scott M",
+  "wins": 6,
+  "losses": 10,
+  "pf": 1424.06,
+  "pa": 1560.14
+ },
+ {
+  "owner": "Jeff J",
+  "opponent": "Daniel B",
+  "wins": 2,
+  "losses": 1,
+  "pf": 274.0,
+  "pa": 237.0
+ },
+ {
+  "owner": "Jeff J",
+  "opponent": "Rushabh S",
+  "wins": 8,
+  "losses": 5,
+  "pf": 1186.8999999999999,
+  "pa": 1076.94
+ },
+ {
+  "owner": "Jeff J",
+  "opponent": "Torre P",
+  "wins": 5,
+  "losses": 10,
+  "pf": 1286.3400000000001,
+  "pa": 1457.6599999999999
+ },
+ {
+  "owner": "Jeff J",
+  "opponent": "Kris C",
+  "wins": 5,
+  "losses": 12,
+  "pf": 1538.4799999999998,
+  "pa": 1625.1999999999998
+ },
+ {
+  "owner": "Jeff J",
+  "opponent": "Dave K",
+  "wins": 5,
+  "losses": 4,
+  "pf": 902.6600000000001,
+  "pa": 779.04
+ },
+ {
+  "owner": "Jeff J",
+  "opponent": "Philippe S",
+  "wins": 6,
+  "losses": 9,
+  "pf": 1303.32,
+  "pa": 1360.5799999999997
+ },
+ {
+  "owner": "Jeff J",
+  "opponent": "Ami S",
+  "wins": 0,
+  "losses": 1,
+  "pf": 80.0,
+  "pa": 133.0
+ },
+ {
+  "owner": "Jeff J",
+  "opponent": "Chris F",
+  "wins": 8,
+  "losses": 4,
+  "pf": 1193.6399999999999,
+  "pa": 1228.98
+ },
+ {
+  "owner": "Jeff J",
+  "opponent": "Tk B",
+  "wins": 1,
+  "losses": 0,
+  "pf": 105.0,
+  "pa": 55.0
+ },
+ {
+  "owner": "Jeff J",
+  "opponent": "Paul R",
+  "wins": 6,
+  "losses": 9,
+  "pf": 1338.32,
+  "pa": 1444.7599999999998
+ },
+ {
+  "owner": "Jeff J",
+  "opponent": "Dan F",
+  "wins": 10,
+  "losses": 3,
+  "pf": 1411.9399999999998,
+  "pa": 1166.62
+ },
+ {
+  "owner": "Jeff J",
+  "opponent": "Matt D",
+  "wins": 4,
+  "losses": 0,
+  "pf": 343.0,
+  "pa": 308.0
+ },
+ {
+  "owner": "Jeff J",
+  "opponent": "Stephen R",
+  "wins": 4,
+  "losses": 9,
+  "pf": 1193.5200000000002,
+  "pa": 1250.7799999999997
+ },
+ {
+  "owner": "Jeff J",
+  "opponent": "Jacob G",
+  "wins": 1,
+  "losses": 3,
+  "pf": 311.82,
+  "pa": 372.24
+ },
+ {
+  "owner": "Jeff J",
+  "opponent": "Nick W",
+  "wins": 4,
+  "losses": 5,
+  "pf": 889.6199999999999,
+  "pa": 936.9000000000001
+ },
+ {
+  "owner": "Jeff J",
+  "opponent": "Dave E",
+  "wins": 9,
+  "losses": 3,
+  "pf": 1014.8399999999999,
+  "pa": 769.3199999999999
+ },
+ {
+  "owner": "Jeff J",
+  "opponent": "Anthony K",
+  "wins": 9,
+  "losses": 6,
+  "pf": 1516.9,
+  "pa": 1376.6399999999999
+ },
+ {
+  "owner": "Jeff J",
+  "opponent": "Donald P",
+  "wins": 6,
+  "losses": 3,
+  "pf": 849.6800000000001,
+  "pa": 671.0000000000001
+ },
+ {
+  "owner": "Dan F",
+  "opponent": "Paul R",
+  "wins": 5,
+  "losses": 8,
+  "pf": 1183.56,
+  "pa": 1197.7399999999998
+ },
+ {
+  "owner": "Dan F",
+  "opponent": "Matt D",
+  "wins": 1,
+  "losses": 2,
+  "pf": 251.0,
+  "pa": 276.0
+ },
+ {
+  "owner": "Dan F",
+  "opponent": "Chris F",
+  "wins": 4,
+  "losses": 8,
+  "pf": 1013.8,
+  "pa": 1232.2799999999997
+ },
+ {
+  "owner": "Dan F",
+  "opponent": "Dave K",
+  "wins": 2,
+  "losses": 3,
+  "pf": 438.53999999999996,
+  "pa": 459.44
+ },
+ {
+  "owner": "Dan F",
+  "opponent": "Philippe S",
+  "wins": 8,
+  "losses": 5,
+  "pf": 1231.0199999999998,
+  "pa": 1141.9199999999998
+ },
+ {
+  "owner": "Dan F",
+  "opponent": "Jeff J",
+  "wins": 3,
+  "losses": 10,
+  "pf": 1166.62,
+  "pa": 1411.9399999999998
+ },
+ {
+  "owner": "Dan F",
+  "opponent": "Daniel B",
+  "wins": 0,
+  "losses": 3,
+  "pf": 228.0,
+  "pa": 278.0
+ },
+ {
+  "owner": "Dan F",
+  "opponent": "Torre P",
+  "wins": 4,
+  "losses": 8,
+  "pf": 1156.66,
+  "pa": 1228.42
+ },
+ {
+  "owner": "Dan F",
+  "opponent": "Scott M",
+  "wins": 10,
+  "losses": 7,
+  "pf": 1536.1800000000003,
+  "pa": 1537.12
+ },
+ {
+  "owner": "Dan F",
+  "opponent": "Rushabh S",
+  "wins": 7,
+  "losses": 7,
+  "pf": 1272.66,
+  "pa": 1283.0
+ },
+ {
+  "owner": "Dan F",
+  "opponent": "Kris C",
+  "wins": 6,
+  "losses": 12,
+  "pf": 1632.0199999999998,
+  "pa": 1897.9000000000003
+ },
+ {
+  "owner": "Dan F",
+  "opponent": "Stephen R",
+  "wins": 7,
+  "losses": 6,
+  "pf": 1230.2199999999998,
+  "pa": 1266.6799999999998
+ },
+ {
+  "owner": "Dan F",
+  "opponent": "Jacob G",
+  "wins": 0,
+  "losses": 2,
+  "pf": 110.18,
+  "pa": 177.62
+ },
+ {
+  "owner": "Dan F",
+  "opponent": "Dave E",
+  "wins": 4,
+  "losses": 6,
+  "pf": 957.22,
+  "pa": 890.8399999999999
+ },
+ {
+  "owner": "Dan F",
+  "opponent": "Nick W",
+  "wins": 4,
+  "losses": 5,
+  "pf": 851.6600000000001,
+  "pa": 923.7399999999998
+ },
+ {
+  "owner": "Dan F",
+  "opponent": "Anthony K",
+  "wins": 6,
+  "losses": 3,
+  "pf": 865.6800000000001,
+  "pa": 772.4799999999999
+ },
+ {
+  "owner": "Dan F",
+  "opponent": "Donald P",
+  "wins": 3,
+  "losses": 5,
+  "pf": 798.9199999999998,
+  "pa": 824.06
+ },
+ {
+  "owner": "Dan F",
+  "opponent": "Ryan M",
+  "wins": 0,
+  "losses": 1,
+  "pf": 100.62,
+  "pa": 141.26
+ },
+ {
+  "owner": "Matt D",
+  "opponent": "Dave K",
+  "wins": 3,
+  "losses": 1,
+  "pf": 413.0,
+  "pa": 341.0
+ },
+ {
+  "owner": "Matt D",
+  "opponent": "Dan F",
+  "wins": 2,
+  "losses": 1,
+  "pf": 276.0,
+  "pa": 251.0
+ },
+ {
+  "owner": "Matt D",
+  "opponent": "Paul R",
+  "wins": 2,
+  "losses": 1,
+  "pf": 272.0,
+  "pa": 234.0
+ },
+ {
+  "owner": "Matt D",
+  "opponent": "Philippe S",
+  "wins": 3,
+  "losses": 0,
+  "pf": 290.0,
+  "pa": 184.0
+ },
+ {
+  "owner": "Matt D",
+  "opponent": "Chris F",
+  "wins": 2,
+  "losses": 1,
+  "pf": 279.0,
+  "pa": 232.0
+ },
+ {
+  "owner": "Matt D",
+  "opponent": "Daniel B",
+  "wins": 3,
+  "losses": 0,
+  "pf": 333.0,
+  "pa": 279.0
+ },
+ {
+  "owner": "Matt D",
+  "opponent": "Torre P",
+  "wins": 3,
+  "losses": 2,
+  "pf": 437.0,
+  "pa": 395.0
+ },
+ {
+  "owner": "Matt D",
+  "opponent": "Scott M",
+  "wins": 2,
+  "losses": 3,
+  "pf": 450.0,
+  "pa": 470.0
+ },
+ {
+  "owner": "Matt D",
+  "opponent": "Rushabh S",
+  "wins": 1,
+  "losses": 2,
+  "pf": 282.0,
+  "pa": 302.0
+ },
+ {
+  "owner": "Matt D",
+  "opponent": "Kris C",
+  "wins": 1,
+  "losses": 3,
+  "pf": 296.0,
+  "pa": 290.0
+ },
+ {
+  "owner": "Matt D",
+  "opponent": "Jeff J",
+  "wins": 0,
+  "losses": 4,
+  "pf": 308.0,
+  "pa": 343.0
+ },
+ {
+  "owner": "Matt D",
+  "opponent": "Stephen R",
+  "wins": 0,
+  "losses": 2,
+  "pf": 143.0,
+  "pa": 199.0
+ },
+ {
+  "owner": "Stephen R",
+  "opponent": "Kris C",
+  "wins": 6,
+  "losses": 7,
+  "pf": 1300.14,
+  "pa": 1374.96
+ },
+ {
+  "owner": "Stephen R",
+  "opponent": "Daniel B",
+  "wins": 1,
+  "losses": 0,
+  "pf": 116.0,
+  "pa": 96.0
+ },
+ {
+  "owner": "Stephen R",
+  "opponent": "Scott M",
+  "wins": 8,
+  "losses": 5,
+  "pf": 1176.18,
+  "pa": 1291.44
+ },
+ {
+  "owner": "Stephen R",
+  "opponent": "Torre P",
+  "wins": 8,
+  "losses": 6,
+  "pf": 1384.6600000000003,
+  "pa": 1401.2599999999998
+ },
+ {
+  "owner": "Stephen R",
+  "opponent": "Jeff J",
+  "wins": 8,
+  "losses": 5,
+  "pf": 1250.7799999999997,
+  "pa": 1193.5200000000002
+ },
+ {
+  "owner": "Stephen R",
+  "opponent": "Paul R",
+  "wins": 8,
+  "losses": 12,
+  "pf": 1805.18,
+  "pa": 2031.8600000000001
+ },
+ {
+  "owner": "Stephen R",
+  "opponent": "Dave K",
+  "wins": 4,
+  "losses": 1,
+  "pf": 484.40000000000003,
+  "pa": 468.5
+ },
+ {
+  "owner": "Stephen R",
+  "opponent": "Matt D",
+  "wins": 2,
+  "losses": 0,
+  "pf": 199.0,
+  "pa": 143.0
+ },
+ {
+  "owner": "Stephen R",
+  "opponent": "Dan F",
+  "wins": 6,
+  "losses": 7,
+  "pf": 1266.6799999999998,
+  "pa": 1230.2199999999998
+ },
+ {
+  "owner": "Stephen R",
+  "opponent": "Philippe S",
+  "wins": 11,
+  "losses": 5,
+  "pf": 1719.3400000000001,
+  "pa": 1528.98
+ },
+ {
+  "owner": "Stephen R",
+  "opponent": "Chris F",
+  "wins": 8,
+  "losses": 4,
+  "pf": 1274.48,
+  "pa": 1166.5
+ },
+ {
+  "owner": "Stephen R",
+  "opponent": "Rushabh S",
+  "wins": 6,
+  "losses": 8,
+  "pf": 1412.8600000000001,
+  "pa": 1471.28
+ },
+ {
+  "owner": "Stephen R",
+  "opponent": "Nick W",
+  "wins": 5,
+  "losses": 3,
+  "pf": 770.3799999999999,
+  "pa": 682.5
+ },
+ {
+  "owner": "Stephen R",
+  "opponent": "Dave E",
+  "wins": 9,
+  "losses": 2,
+  "pf": 1180.2,
+  "pa": 906.3600000000001
+ },
+ {
+  "owner": "Stephen R",
+  "opponent": "Jacob G",
+  "wins": 2,
+  "losses": 2,
+  "pf": 348.14,
+  "pa": 429.44
+ },
+ {
+  "owner": "Stephen R",
+  "opponent": "Anthony K",
+  "wins": 6,
+  "losses": 2,
+  "pf": 827.3199999999999,
+  "pa": 775.8199999999999
+ },
+ {
+  "owner": "Stephen R",
+  "opponent": "Donald P",
+  "wins": 2,
+  "losses": 1,
+  "pf": 342.5,
+  "pa": 318.53999999999996
+ },
+ {
+  "owner": "Stephen R",
+  "opponent": "Ryan M",
+  "wins": 0,
+  "losses": 1,
+  "pf": 90.6,
+  "pa": 114.24
+ },
+ {
+  "owner": "Jacob G",
+  "opponent": "Dan F",
+  "wins": 2,
+  "losses": 0,
+  "pf": 177.62,
+  "pa": 110.18
+ },
+ {
+  "owner": "Jacob G",
+  "opponent": "Jeff J",
+  "wins": 3,
+  "losses": 1,
+  "pf": 372.24,
+  "pa": 311.82
+ },
+ {
+  "owner": "Jacob G",
+  "opponent": "Chris F",
+  "wins": 1,
+  "losses": 3,
+  "pf": 333.12,
+  "pa": 431.64
+ },
+ {
+  "owner": "Jacob G",
+  "opponent": "Dave E",
+  "wins": 3,
+  "losses": 0,
+  "pf": 306.88,
+  "pa": 270.72
+ },
+ {
+  "owner": "Jacob G",
+  "opponent": "Philippe S",
+  "wins": 2,
+  "losses": 2,
+  "pf": 385.44000000000005,
+  "pa": 386.5
+ },
+ {
+  "owner": "Jacob G",
+  "opponent": "Dave K",
+  "wins": 1,
+  "losses": 1,
+  "pf": 204.36,
+  "pa": 197.16
+ },
+ {
+  "owner": "Jacob G",
+  "opponent": "Paul R",
+  "wins": 1,
+  "losses": 2,
+  "pf": 285.9,
+  "pa": 296.15999999999997
+ },
+ {
+  "owner": "Jacob G",
+  "opponent": "Kris C",
+  "wins": 3,
+  "losses": 0,
+  "pf": 379.98,
+  "pa": 230.96
+ },
+ {
+  "owner": "Jacob G",
+  "opponent": "Rushabh S",
+  "wins": 0,
+  "losses": 3,
+  "pf": 272.36,
+  "pa": 397.46000000000004
+ },
+ {
+  "owner": "Jacob G",
+  "opponent": "Scott M",
+  "wins": 2,
+  "losses": 1,
+  "pf": 233.56,
+  "pa": 228.8
+ },
+ {
+  "owner": "Jacob G",
+  "opponent": "Stephen R",
+  "wins": 2,
+  "losses": 2,
+  "pf": 429.44,
+  "pa": 348.14
+ },
+ {
+  "owner": "Jacob G",
+  "opponent": "Torre P",
+  "wins": 1,
+  "losses": 2,
+  "pf": 275.9,
+  "pa": 297.84000000000003
+ },
+ {
+  "owner": "Jacob G",
+  "opponent": "Anthony K",
+  "wins": 1,
+  "losses": 1,
+  "pf": 209.77999999999997,
+  "pa": 199.98
+ },
+ {
+  "owner": "Jacob G",
+  "opponent": "Donald P",
+  "wins": 0,
+  "losses": 1,
+  "pf": 64.8,
+  "pa": 105.54
+ },
+ {
+  "owner": "Dave E",
+  "opponent": "Dave K",
+  "wins": 1,
+  "losses": 1,
+  "pf": 168.14,
+  "pa": 216.07999999999998
+ },
+ {
+  "owner": "Dave E",
+  "opponent": "Paul R",
+  "wins": 6,
+  "losses": 4,
+  "pf": 933.9,
+  "pa": 910.5799999999999
+ },
+ {
+  "owner": "Dave E",
+  "opponent": "Dan F",
+  "wins": 6,
+  "losses": 4,
+  "pf": 890.8399999999999,
+  "pa": 957.22
+ },
+ {
+  "owner": "Dave E",
+  "opponent": "Jacob G",
+  "wins": 0,
+  "losses": 3,
+  "pf": 270.72,
+  "pa": 306.88
+ },
+ {
+  "owner": "Dave E",
+  "opponent": "Chris F",
+  "wins": 3,
+  "losses": 6,
+  "pf": 776.48,
+  "pa": 787.82
+ },
+ {
+  "owner": "Dave E",
+  "opponent": "Scott M",
+  "wins": 2,
+  "losses": 10,
+  "pf": 780.3399999999999,
+  "pa": 1153.0
+ },
+ {
+  "owner": "Dave E",
+  "opponent": "Philippe S",
+  "wins": 5,
+  "losses": 5,
+  "pf": 813.42,
+  "pa": 938.6399999999999
+ },
+ {
+  "owner": "Dave E",
+  "opponent": "Stephen R",
+  "wins": 2,
+  "losses": 9,
+  "pf": 906.3600000000001,
+  "pa": 1180.2
+ },
+ {
+  "owner": "Dave E",
+  "opponent": "Torre P",
+  "wins": 3,
+  "losses": 10,
+  "pf": 1052.52,
+  "pa": 1345.2199999999998
+ },
+ {
+  "owner": "Dave E",
+  "opponent": "Nick W",
+  "wins": 2,
+  "losses": 8,
+  "pf": 780.68,
+  "pa": 1007.88
+ },
+ {
+  "owner": "Dave E",
+  "opponent": "Jeff J",
+  "wins": 3,
+  "losses": 9,
+  "pf": 769.3199999999999,
+  "pa": 1014.8399999999999
+ },
+ {
+  "owner": "Dave E",
+  "opponent": "Kris C",
+  "wins": 1,
+  "losses": 8,
+  "pf": 470.15999999999997,
+  "pa": 783.36
+ },
+ {
+  "owner": "Dave E",
+  "opponent": "Anthony K",
+  "wins": 2,
+  "losses": 7,
+  "pf": 671.6999999999999,
+  "pa": 869.62
+ },
+ {
+  "owner": "Dave E",
+  "opponent": "Rushabh S",
+  "wins": 0,
+  "losses": 4,
+  "pf": 240.26,
+  "pa": 372.6
+ },
+ {
+  "owner": "Dave E",
+  "opponent": "Donald P",
+  "wins": 4,
+  "losses": 4,
+  "pf": 639.1,
+  "pa": 686.46
+ },
+ {
+  "owner": "Dave E",
+  "opponent": "Ryan M",
+  "wins": 0,
+  "losses": 1,
+  "pf": 85.24,
+  "pa": 108.1
+ },
+ {
+  "owner": "Nick W",
+  "opponent": "Scott M",
+  "wins": 3,
+  "losses": 6,
+  "pf": 814.22,
+  "pa": 894.9200000000001
+ },
+ {
+  "owner": "Nick W",
+  "opponent": "Kris C",
+  "wins": 6,
+  "losses": 2,
+  "pf": 813.5999999999999,
+  "pa": 725.98
+ },
+ {
+  "owner": "Nick W",
+  "opponent": "Dave K",
+  "wins": 0,
+  "losses": 2,
+  "pf": 133.7,
+  "pa": 222.2
+ },
+ {
+  "owner": "Nick W",
+  "opponent": "Stephen R",
+  "wins": 3,
+  "losses": 5,
+  "pf": 682.5,
+  "pa": 770.3799999999999
+ },
+ {
+  "owner": "Nick W",
+  "opponent": "Rushabh S",
+  "wins": 5,
+  "losses": 3,
+  "pf": 771.24,
+  "pa": 770.22
+ },
+ {
+  "owner": "Nick W",
+  "opponent": "Jeff J",
+  "wins": 5,
+  "losses": 4,
+  "pf": 936.9000000000001,
+  "pa": 889.6199999999999
+ },
+ {
+  "owner": "Nick W",
+  "opponent": "Torre P",
+  "wins": 6,
+  "losses": 4,
+  "pf": 1042.86,
+  "pa": 1022.4599999999998
+ },
+ {
+  "owner": "Nick W",
+  "opponent": "Chris F",
+  "wins": 2,
+  "losses": 1,
+  "pf": 301.96000000000004,
+  "pa": 287.72
+ },
+ {
+  "owner": "Nick W",
+  "opponent": "Paul R",
+  "wins": 6,
+  "losses": 4,
+  "pf": 959.94,
+  "pa": 927.9000000000001
+ },
+ {
+  "owner": "Nick W",
+  "opponent": "Dave E",
+  "wins": 8,
+  "losses": 2,
+  "pf": 1007.88,
+  "pa": 780.68
+ },
+ {
+  "owner": "Nick W",
+  "opponent": "Dan F",
+  "wins": 5,
+  "losses": 4,
+  "pf": 923.7399999999998,
+  "pa": 851.6600000000001
+ },
+ {
+  "owner": "Nick W",
+  "opponent": "Philippe S",
+  "wins": 2,
+  "losses": 5,
+  "pf": 635.08,
+  "pa": 677.6800000000001
+ },
+ {
+  "owner": "Nick W",
+  "opponent": "Anthony K",
+  "wins": 5,
+  "losses": 2,
+  "pf": 669.0,
+  "pa": 521.7
+ },
+ {
+  "owner": "Nick W",
+  "opponent": "Donald P",
+  "wins": 9,
+  "losses": 2,
+  "pf": 1150.06,
+  "pa": 923.6600000000001
+ },
+ {
+  "owner": "Nick W",
+  "opponent": "Ryan M",
+  "wins": 1,
+  "losses": 0,
+  "pf": 111.46,
+  "pa": 81.76
+ },
+ {
+  "owner": "Anthony K",
+  "opponent": "Dave E",
+  "wins": 7,
+  "losses": 2,
+  "pf": 869.62,
+  "pa": 671.6999999999999
+ },
+ {
+  "owner": "Anthony K",
+  "opponent": "Paul R",
+  "wins": 1,
+  "losses": 8,
+  "pf": 776.1999999999999,
+  "pa": 957.76
+ },
+ {
+  "owner": "Anthony K",
+  "opponent": "Dan F",
+  "wins": 3,
+  "losses": 6,
+  "pf": 772.4799999999999,
+  "pa": 865.6800000000001
+ },
+ {
+  "owner": "Anthony K",
+  "opponent": "Chris F",
+  "wins": 1,
+  "losses": 7,
+  "pf": 715.26,
+  "pa": 806.34
+ },
+ {
+  "owner": "Anthony K",
+  "opponent": "Dave K",
+  "wins": 0,
+  "losses": 1,
+  "pf": 91.02,
+  "pa": 123.3
+ },
+ {
+  "owner": "Anthony K",
+  "opponent": "Jeff J",
+  "wins": 6,
+  "losses": 9,
+  "pf": 1376.6399999999999,
+  "pa": 1516.9
+ },
+ {
+  "owner": "Anthony K",
+  "opponent": "Philippe S",
+  "wins": 6,
+  "losses": 3,
+  "pf": 953.8999999999999,
+  "pa": 851.8
+ },
+ {
+  "owner": "Anthony K",
+  "opponent": "Torre P",
+  "wins": 2,
+  "losses": 4,
+  "pf": 508.56000000000006,
+  "pa": 574.4200000000001
+ },
+ {
+  "owner": "Anthony K",
+  "opponent": "Kris C",
+  "wins": 3,
+  "losses": 7,
+  "pf": 862.92,
+  "pa": 1021.9599999999999
+ },
+ {
+  "owner": "Anthony K",
+  "opponent": "Scott M",
+  "wins": 4,
+  "losses": 6,
+  "pf": 918.0200000000001,
+  "pa": 945.1199999999999
+ },
+ {
+  "owner": "Anthony K",
+  "opponent": "Stephen R",
+  "wins": 2,
+  "losses": 6,
+  "pf": 775.8199999999999,
+  "pa": 827.3199999999999
+ },
+ {
+  "owner": "Anthony K",
+  "opponent": "Jacob G",
+  "wins": 1,
+  "losses": 1,
+  "pf": 199.98,
+  "pa": 209.77999999999997
+ },
+ {
+  "owner": "Anthony K",
+  "opponent": "Rushabh S",
+  "wins": 4,
+  "losses": 4,
+  "pf": 669.4599999999999,
+  "pa": 685.5200000000001
+ },
+ {
+  "owner": "Anthony K",
+  "opponent": "Donald P",
+  "wins": 4,
+  "losses": 4,
+  "pf": 741.3600000000001,
+  "pa": 673.32
+ },
+ {
+  "owner": "Anthony K",
+  "opponent": "Nick W",
+  "wins": 2,
+  "losses": 5,
+  "pf": 521.7,
+  "pa": 669.0
+ },
+ {
+  "owner": "Anthony K",
+  "opponent": "Ryan M",
+  "wins": 1,
+  "losses": 0,
+  "pf": 92.88,
+  "pa": 84.5
+ },
+ {
+  "owner": "Donald P",
+  "opponent": "Dan F",
+  "wins": 5,
+  "losses": 3,
+  "pf": 824.06,
+  "pa": 798.9199999999998
+ },
+ {
+  "owner": "Donald P",
+  "opponent": "Philippe S",
+  "wins": 4,
+  "losses": 4,
+  "pf": 774.3199999999999,
+  "pa": 787.5999999999999
+ },
+ {
+  "owner": "Donald P",
+  "opponent": "Stephen R",
+  "wins": 1,
+  "losses": 2,
+  "pf": 318.53999999999996,
+  "pa": 342.5
+ },
+ {
+  "owner": "Donald P",
+  "opponent": "Paul R",
+  "wins": 3,
+  "losses": 6,
+  "pf": 834.88,
+  "pa": 910.74
+ },
+ {
+  "owner": "Donald P",
+  "opponent": "Dave E",
+  "wins": 4,
+  "losses": 4,
+  "pf": 686.46,
+  "pa": 639.1
+ },
+ {
+  "owner": "Donald P",
+  "opponent": "Torre P",
+  "wins": 5,
+  "losses": 4,
+  "pf": 895.86,
+  "pa": 914.18
+ },
+ {
+  "owner": "Donald P",
+  "opponent": "Scott M",
+  "wins": 2,
+  "losses": 5,
+  "pf": 602.68,
+  "pa": 629.28
+ },
+ {
+  "owner": "Donald P",
+  "opponent": "Rushabh S",
+  "wins": 8,
+  "losses": 3,
+  "pf": 990.0199999999999,
+  "pa": 926.8199999999999
+ },
+ {
+  "owner": "Donald P",
+  "opponent": "Kris C",
+  "wins": 2,
+  "losses": 7,
+  "pf": 768.6200000000001,
+  "pa": 968.5
+ },
+ {
+  "owner": "Donald P",
+  "opponent": "Chris F",
+  "wins": 3,
+  "losses": 6,
+  "pf": 810.96,
+  "pa": 995.56
+ },
+ {
+  "owner": "Donald P",
+  "opponent": "Jacob G",
+  "wins": 1,
+  "losses": 0,
+  "pf": 105.54,
+  "pa": 64.8
+ },
+ {
+  "owner": "Donald P",
+  "opponent": "Anthony K",
+  "wins": 4,
+  "losses": 4,
+  "pf": 673.32,
+  "pa": 741.3600000000001
+ },
+ {
+  "owner": "Donald P",
+  "opponent": "Jeff J",
+  "wins": 3,
+  "losses": 6,
+  "pf": 671.0000000000001,
+  "pa": 849.6800000000001
+ },
+ {
+  "owner": "Donald P",
+  "opponent": "Nick W",
+  "wins": 2,
+  "losses": 9,
+  "pf": 923.6600000000001,
+  "pa": 1150.06
+ },
+ {
+  "owner": "Donald P",
+  "opponent": "Ryan M",
+  "wins": 1,
+  "losses": 0,
+  "pf": 118.54,
+  "pa": 111.06
+ },
+ {
+  "owner": "Ryan M",
+  "opponent": "Dan F",
+  "wins": 1,
+  "losses": 0,
+  "pf": 141.26,
+  "pa": 100.62
+ },
+ {
+  "owner": "Ryan M",
+  "opponent": "Rushabh S",
+  "wins": 0,
+  "losses": 1,
+  "pf": 97.22,
+  "pa": 126.8
+ },
+ {
+  "owner": "Ryan M",
+  "opponent": "Donald P",
+  "wins": 0,
+  "losses": 1,
+  "pf": 111.06,
+  "pa": 118.54
+ },
+ {
+  "owner": "Ryan M",
+  "opponent": "Philippe S",
+  "wins": 0,
+  "losses": 1,
+  "pf": 104.62,
+  "pa": 134.0
+ },
+ {
+  "owner": "Ryan M",
+  "opponent": "Dave E",
+  "wins": 1,
+  "losses": 0,
+  "pf": 108.1,
+  "pa": 85.24
+ },
+ {
+  "owner": "Ryan M",
+  "opponent": "Anthony K",
+  "wins": 0,
+  "losses": 1,
+  "pf": 84.5,
+  "pa": 92.88
+ },
+ {
+  "owner": "Ryan M",
+  "opponent": "Paul R",
+  "wins": 1,
+  "losses": 0,
+  "pf": 123.82,
+  "pa": 96.66
+ },
+ {
+  "owner": "Ryan M",
+  "opponent": "Torre P",
+  "wins": 0,
+  "losses": 1,
+  "pf": 58.18,
+  "pa": 101.02
+ },
+ {
+  "owner": "Ryan M",
+  "opponent": "Nick W",
+  "wins": 0,
+  "losses": 1,
+  "pf": 81.76,
+  "pa": 111.46
+ },
+ {
+  "owner": "Ryan M",
+  "opponent": "Scott M",
+  "wins": 1,
+  "losses": 0,
+  "pf": 111.62,
+  "pa": 69.76
+ },
+ {
+  "owner": "Ryan M",
+  "opponent": "Stephen R",
+  "wins": 1,
+  "losses": 0,
+  "pf": 114.24,
+  "pa": 90.6
+ }
+]

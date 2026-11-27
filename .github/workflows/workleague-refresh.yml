@@ -1,0 +1,27 @@
+name: workleague-refresh
+on:
+  schedule:
+    - cron: "0 14 * * *"   # once a day, 6am PT / 7am PDT
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: workleague-refresh
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install requests
+      - name: Fetch ESPN league 591271
+        env:
+          ESPN_S2: ${{ secrets.ESPN_S2 }}
+          SWID: ${{ secrets.ESPN_SWID }}
+        run: python3 workleague/build/scripts/fetch_espn.py
+      - run: python3 workleague/build/scripts/build_data.py
+      - name: Commit if changed
+        run: |
+          git config user.name "workleague-bot"; git config user.email "workleague-bot@users.noreply.github.com"
+          git add workleague/index.html workleague/data.json workleague/build/data
+          git diff --cached --quiet || (git commit -m "Work League refresh $(date -u +%F)" && git pull --rebase -q && git push)

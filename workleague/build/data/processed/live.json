@@ -1,0 +1,49 @@
+{
+ "year": 2026,
+ "week": 12,
+ "updated": "2026-11-27 11:53",
+ "games": [
+  {
+   "a": "Torre P",
+   "b": "Philippe S",
+   "a_pts": 56.32,
+   "b_pts": 70.86
+  },
+  {
+   "a": "Rushabh S",
+   "b": "Dan F",
+   "a_pts": 63.4,
+   "b_pts": 17.82
+  },
+  {
+   "a": "Jeff J",
+   "b": "Dave E",
+   "a_pts": 52.9,
+   "b_pts": 0
+  },
+  {
+   "a": "Kris C",
+   "b": "Ryan M",
+   "a_pts": 27.3,
+   "b_pts": 46.9
+  },
+  {
+   "a": "Stephen R",
+   "b": "Anthony K",
+   "a_pts": 25.5,
+   "b_pts": 15.8
+  },
+  {
+   "a": "Scott M",
+   "b": "Donald P",
+   "a_pts": 36.1,
+   "b_pts": 43.14
+  },
+  {
+   "a": "Nick W",
+   "b": "Paul R",
+   "a_pts": 4.34,
+   "b_pts": 13.9
+  }
+ ]
+}
