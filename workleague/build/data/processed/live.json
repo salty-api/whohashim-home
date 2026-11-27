@@ -1,12 +1,12 @@
 {
  "year": 2026,
  "week": 12,
- "updated": "2026-11-27 11:53",
+ "updated": "2026-11-27 20:08",
  "games": [
   {
    "a": "Torre P",
    "b": "Philippe S",
-   "a_pts": 56.32,
+   "a_pts": 58.32,
    "b_pts": 70.86
   },
   {
@@ -36,7 +36,7 @@
   {
    "a": "Scott M",
    "b": "Donald P",
-   "a_pts": 36.1,
+   "a_pts": 46.1,
    "b_pts": 43.14
   },
   {
